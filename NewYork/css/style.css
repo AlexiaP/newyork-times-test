@@ -1,0 +1,46 @@
+html, body {
+margin:0;
+background-color:#fff;
+}
+#container{
+margin:auto;
+padding:auto;
+width:960px;
+}
+#menu {
+border-bottom:1px solid #dedede;
+padding:15px 15px 15px 0px;
+font: bold 10px georgia, arial, sans-serif;
+text-transform:uppercase;
+}
+
+#menu span a{
+color: #333;
+text-decoration:none;
+padding:7px;
+}
+#menu span a:hover{
+background:#efefef;
+padding:7px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+#menu img{
+vertical-align:top;
+padding-right:10px;
+}
+
+#right{
+float:right;
+}
+#right .login a{
+background-color:#4682B4;
+color:#fff;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+#right .login a:hover{
+background-color:#424282;
+}
