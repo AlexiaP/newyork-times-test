@@ -3,23 +3,272 @@
 <html>
 <head>
 	<title>The New York Times</title>
-	<!-- meta http-equiv è meglio metterlo? -->
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="author" content="Alessandra">
-	<!-- meta description a che serve -->
-	<meta name="description" content="">
 	<meta name="keyword" content="news, magazine, new york, world, politics, sports, science, technology">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+<div id="overlay"></div>
 <div id="container">
-<div id="menu">
-<span><a href="#"><img src="img/menu.png">sections</a></span>
-<span><a href="#"><img src="img/search.png">search</a></span>
-<div id="right">
-<span class="login"><a href="javascript:;" onclick="window.open('login.html','mywindow','resizable=1, width=400,height=500');">log in</a></span>
-<span><a href="#"><img src="img/ingranaggio.png"></a></span></div>
-</div>
+	<div id="menu">
+		<span><a href="#" onclick="document.getElementById('subMenu').style.display='block';"><img src="img/menu.png">sections</a></span>
+			<!-- nascondere submenu quando mouse va fuori div submenu-->
+		
+			<div id="subMenu">
+				<ul>
+					<li><a href="#">Home Page</a></li>
+					<li><a href="#" class="arrow">World</a>
+						<ul>
+							<h5>World</h5>
+							<li><a href="#">Africa</a></li>
+							<li><a href="#">America</a></li>
+							<li><a href="#">Asia Pacific</a></li>
+							<li><a href="#">Europe</a></li>
+							<li><a href="#">Middle East</a></li>
+							<li><a href="#">At War</a></li>
+							<li><a href="#">India Ink</a></li>
+							<li><a href="#">Sinosphere</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="arrow">U.S.</a>
+						<ul>
+							<h5>U.S.</h5>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">The Upshot</a></li>
+							<li><a href="#">Motherlode</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="arrow">Politics</a>
+						<ul>
+							<h5>Politics</h5>
+							<li><a href="#">First Draft</a></li>
+							<li><a href="#">Elections</a></li>
+							<li><a href="#">The Upshot</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="arrow">New York</a>
+						<ul>
+							<h5>New York</h5>
+							<li><a href="#">City Room</a></li>
+							<li><a href="#">ArtsBeat </a></li>
+							<li><a href="#">Events</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Business</a>
+						<ul>
+							<h5>Business</h5>
+							<li><a href="#">DealBook</a></li>
+							<li><a href="#">Economy</a></li>
+							<li><a href="#">Energy</a></li>
+							<li><a href="#">Markets</a></li>
+							<li><a href="#">Media</a></li>
+							<li><a href="#">Small Business</a></li>
+							<li><a href="#">Your Money</a></li>
+							<li><a href="#">Automobiles</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Opinion</a>
+						<ul>
+							<h5>Opinion</h5>
+							<li><a href="#">Op-Ed Columnists</a>
+								<ul class="sub2">
+									<h5>Op-Ed Columnists</h5>
+									<li><a href="#">Charles M. Blow</a></li>
+									<li><a href="#">David Brooks</a></li>
+									<li><a href="#">Frank Bruni</a></li>
+									<li><a href="#">Roger Cohen</a></li>
+									<li><a href="#">Gail Collins</a></li>
+									<li><a href="#">Ross Douthat</a></li>
+									<li><a href="#">Maureen Dowd</a></li>
+									<li><a href="#">Thomas L. Friedman</a></li>
+									<li><a href="#">Nicholas Kristof</a></li>
+									<li><a href="#">Paul Krugman</a></li>
+									<li><a href="#">Joe Nocera</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Editorials </a></li>
+							<li><a href="#">Contributing Writers</a></li>
+							<li><a href="#">Op-Ed Contributors</a></li>
+							<li><a href="#">Opinionator</a></li>
+							<li><a href="#">Letters</a></li>
+							<li><a href="#">Sunday Review</a></li>
+							<li><a href="#">Taking Note</a></li>
+							<li><a href="#">Room For Debate</a></li>
+							<li><a href="#">Public Editor</a></li>
+							<li><a href="#">Cartoons</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Technology</a>
+						<ul>
+							<h5>Technology</h5>
+							<li><a href="#">Bits</a></li>
+							<li><a href="#">Personal Tech </a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Science</a>
+						<ul>
+							<h5>Science</h5>
+							<li><a href="#">Environment</a></li>
+							<li><a href="#">Space & Cosmos</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Health</a>
+						<ul>
+							<h5>Health</h5>
+							<li><a href="#">Well</a></li>
+							<li><a href="#">Money & Policy </a></li>
+							<li><a href="#">Health Guide</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Sport</a>
+						<ul>
+							<h5>Sport</h5>
+							<li><a href="#">Baseball</a></li>
+							<li><a href="#">Basketball: College </a></li>
+							<li><a href="#">Basketball: N.B.A.</a></li>
+							<li><a href="#">Football: College </a></li>
+							<li><a href="#">Football: N.F.A. </a></li>
+							<li><a href="#">Golf</a></li>
+							<li><a href="#">Hokey</a></li>
+							<li><a href="#">Soccer</a></li>
+							<li><a href="#">Tennis</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#" class="arrow">Arts</a>
+						<ul>
+							<h5>Arts</h5>
+							<li><a href="#">Art & Design</a></li>
+							<li><a href="#">ArtsBeat </a></li>
+							<li><a href="#">Books</a></li>
+							<li><a href="#">Dance</a></li>
+							<li><a href="#">Movie</a></li>
+							<li><a href="#">Music</a></li>
+							<li><a href="#">N.Y.C. Events Guide</a></li>
+							<li><a href="#">Television</a></li>
+							<li><a href="#">Theater</a></li>
+							<li><a href="#">Video Games</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Fashion & Style</a>
+						<ul>
+							<h5>Fashion & Style</h5>
+							<li><a href="#">Men's Style</a></li>
+							<li><a href="#">T Magazine </a></li>
+							<li><a href="#">On The Runway</a></li>
+							<li><a href="#">Weddings</a></li>
+						</ul>
+					</li>	
+					<li><a href="#" class="arrow">Food</a>
+						<ul>
+							<h5>Food</h5>
+							<li><a href="#">Cooking</a></li>
+							<li><a href="#">Restaurant Search </a></li>
+						</ul>
+					</li>	
+					<li><a href="#">Home & Garden</a></li>
+					<li><a href="#">Travel</a></li>
+					<li><a href="#">Magazine</a></li>
+					<li><a href="#">Real Estate</a>
+						<ul>
+							<h5>Real Estate</h5>
+							<li><a href="#">Commercial Real Estate</a></li>
+							<li><a href="#">Great Homes & Destination </a></li>
+							<li><a href="#">My Real Estate</a></li>
+						</ul>
+					</li>	
+				</ul>
+				<ul>
+					<li><a href="#" class="arrow">Video</a>
+						<ul>
+							<h5>Video</h5>
+							<li><a href="#">U.S. & Politics</a></li>
+							<li><a href="#">International</a></li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">Op-Docs</a></li>
+							<li><a href="#">Opinion</a></li>
+							<li><a href="#">Times Documentaries</a></li>
+							<li><a href="#">Business</a></li>
+							<li><a href="#">Technology</a></li>
+							<li><a href="#">Culture</a></li>
+							<li><a href="#">Style</a></li>
+							<li><a href="#">Health</a></li>
+							<li><a href="#">Food</a></li>
+							<li><a href="#">Travel</a></li>
+							<li><a href="#">Sports</a></li>
+							<li><a href="#">Real Estate</a></li>
+							<li><a href="#">Science</a></li>
+						</ul>
+					</li>		
+					<li><a href="#">The Upshot</a></li>
+					<li><a href="#" class="arrow">Conferences</a>
+						<ul>
+							<h5>Conferences</h5>
+							<li><a href="#">Women in the World</a></li>
+							<li><a href="#">Cities for tomorrow </a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="#" class="arrow">More</a>
+						<ul>
+							<h5>More</h5>
+							<li><a href="#">Crossword</a></li>
+							<li><a href="#">Times Premier </a></li>
+							<li><a href="#">Today's Paper</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Corrections</a></li>
+							<li><a href="#">Obituaries</a></li>
+							<li><a href="#">Multimedia </a></li>
+							<li><a href="#">Photography</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Classifieds</a></li>
+							<li><a href="#">Tools & Services</a></li>
+							<li><a href="#">Jobs </a></li>
+							<li><a href="#">Times Topics</a></li>
+							<li><a href="#">Blogs</a></li>
+							<li><a href="#">NYT Store</a></li>
+							<li><a href="#">Times Journeys</a></li>
+							<li><a href="#">Subscribe</a></li>
+							<li><a href="#">Manage Account</a></li>
+						</ul>
+					</li>	
+				</ul>
+			</div>
+		<span><a href="#"><img src="img/search.png">search</a>
+			<div id="search">
+			</div>
+		</span>
+		<div id="right">
+			<span class="buttonLogin"><a href="#">Subscribe now</a></span>
+			<span class="buttonLogin"><a href="#windowLogin" onclick="document.getElementById('windowLogin').style.display='block'; document.getElementById('overlay').style.display='block'">log in</a></span>
+			<span><a href="#"><img src="img/ingranaggio.png"></a></span>
+		</div>
+	</div>
+		<div id="windowLogin">
+			<span class="close"><a href="#" onclick="document.getElementById('windowLogin').style.display='none';document.getElementById('overlay').style.display='none'">&times;</a></span>
+			<p class="titleLogin">Log in</p>
+			<p class="descriptionLogin">To save articles or get newsletters, alerts or recommendations – all free.</p>
+			<p class="buttonFacebook"><a href="#">Log in with Facebook</a></p>
+			<p class="buttonGoogle"><a href="#">Log in with Google</a></p>
+			<div id="formLog">
+				<p class="or">or</p>
+				<form action="#" method="get">
+					<input  class="access" type="text" name="Nome" value="Email address" size="40">
+					<input class="access" type="password" name="Pass" value="Password" size="40">
+					<span class="check"><input type="checkbox" checked> Remember me</span>
+					<span class="forgot"><a href="#">Forgot password?</a></span>
+					<p class="privacy"><a href="#">Terms of service</a><a href="#">Privacy Policy</a></p>
+					<input class="submit" type="submit" value="Log in">
+				</form>
+				<p class="sign">Don't have an account?<a href="#">Sign up</a></p>
+			</div>
+		</div>
 </div>
 </body>
 </html>
