@@ -10,9 +10,23 @@ height:100%;
 top:0;
 left:0;
 opacity: 0.9;
-filter: alpha(opacity=60); /* For IE8 and earlier */
+filter: alpha(opacity=90); /* For IE8 and earlier */
 display:none;
 background-color:#fff;
+z-index:1;
+}
+
+#overlaySearch{
+position:absolute;
+width:100%;
+height:100%;
+top:40px;
+left:0;
+opacity: 0.9;
+filter: alpha(opacity=90); /* For IE8 and earlier */
+display:none;
+background-color:#fff;
+z-index:1;
 }
 
 #container{
@@ -23,60 +37,370 @@ width:960px;
 
 #menu {
 border-bottom:1px solid #dedede;
-padding:15px 15px 15px 0px;
+padding:15px 0;
 font: bold 10px georgia, arial, sans-serif;
 }
 
-#menu span a{
+.right{
+float:right;
+}
+
+.left{
+float:left;
+}
+
+/*bottoni menu left */
+a.grey-button{
 color: #333;
 text-decoration:none;
 padding:7px;
 text-transform:uppercase;
-
+vertical-align:middle;
 }
-#menu span a:hover{
+a.grey-button:hover{
 background:#efefef;
-padding:7px;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
 }
-#menu img{
-vertical-align:top;
-padding-right:10px;
+
+/*immagini menu left */
+.imgSections:before{
+content:url(../img/menu.png);
+padding:5px;
 }
 
-#right{
-float:right;
+.imgSearch:before{
+content:url(../img/search.png);
+padding:5px;
+vertical-align:top;
 }
-#right .buttonLogin a{
+
+/*bottoni menu right */
+a.blue-button{
 background-color:#4682B4;
 color:#fff;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
+text-transform:uppercase;
+padding:8px;
+text-decoration:none;
+vertical-align:middle;
+margin-right:7px;
+
 }
-#right .buttonLogin a:hover{
+a.blue-button:hover{
 background-color:#424282;
+}
+
+/*immagini menu right */
+.imgImpostazioni:before{
+content:url(../img/ingranaggio.png);
+vertical-align:top;
+}
+
+/* inizio css sottomenu */
+#subMenu{
+position:absolute;
+top:0;
+left:0;
+border-right:1px solid #dedede;
+display:none;
+width:200px;
+box-shadow:0 -6px 6px 2px #dedede;
+-moz-box-shadow:0 -6px 6px 2px #dedede;
+-webkit-box-shadow:0 -6px 6px 2px #dedede;
+background-color:#fff;
+font: bold 12px georgia,arial, sans-serif;
+}
+#subMenu ul{
+list-style-type:none;
+padding:0;
+margin:10px;
+border-bottom:1px solid #dedede;
+}
+
+#subMenu ul  li{
+position:relative;
+}
+
+#subMenu ul li a{
+color:black;
+text-decoration:none;
+display:block;
+padding:5px;
+}
+
+#subMenu ul li a:hover{
+background-color:#99cbff;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+
+.arrow:after{
+content:url(../img/freccia.png);
+position:absolute;
+left:165px;
+}
+
+/* inizio css second sottomenu */
+#subMenu > ul > li > .subDiv {
+display:none;
+width:180px;
+position:absolute;
+left: 180px;
+top: -6px;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+#subMenu > ul > li > .subDiv > ul:before{
+content:url(../img/frecciaD.png);
+left:-14px;
+top:5px;
+position:absolute;
+}
+
+#subMenu > ul > li > .subDiv > ul{
+border:none;
+}
+
+#subMenu ul li:hover > .subDiv{
+display:block;
+border:1px solid #dedede;
+background-color:#fff;
+z-index:10;
+}
+
+#subMenu ul li:hover > .arrow:after{
+content:none;
+}
+
+h5 {
+padding:5px;
+margin:10px;
+color:#999;
+font-weight:normal;
+text-transform:uppercase;
+}
+
+/* inizio css third sottomenu */
+#subMenu > ul > li > .subDiv > ul  > li > .thirdSubMenu{
+display:none;
+width:200px;
+position:absolute;
+left: 160px;
+top: -44px;
+}
+
+#subMenu > ul > li > .subDiv > ul > li:hover > .thirdSubMenu {
+display:block;
+border-top:1px solid #dedede;
+border-right:1px solid #dedede;
+border-bottom:1px solid #dedede;
+background-color:#fff;
+}
+.thirdSubMenu h5{
+padding-left:20px;
+}
+
+#subMenu > ul > li > .subDiv > ul  > li > .thirdSubMenu  ul{
+border:none;
+border-left:1px solid #dedede;
+padding-left:15px;
+}
+
+.thirdSubMenu ul:before{
+content:url(../img/frecciaDMini.png);
+left:1px;
+top:13px;
+position:absolute;
+}
+
+/*sparisce freccia quando si va sul link */
+#subMenu > ul > li > .subDiv > ul > li:hover > .sub2:after{
+content:none;
+}
+
+.sub2:after{
+content:url(../img/freccia.png);
+position:absolute;
+left:150px;
+}
+
+/* inizio casella di ricerca*/
+#search{
+position:absolute;
+left:0;
+top:50px;
+width:100%;
+display:none;
+border:1px solid #dedede;
+box-shadow:0 6px 5px -2px #dedede;
+-moz-box-shadow: 0 6px 5px -2px #dedede;
+-webkit-box-shadow: 0 6px 5px -2px #dedede;
+background-color:#fff;
+z-index:2;
+}
+
+#searchForm{
+padding:6px;
+text-align:center;
+}
+
+#searchForm .textsearch{
+border:1px solid #dedede;
+box-shadow:2px 2px 2px 0 #dedede inset;
+-moz-box-shadow:2px 2px 2px 0 #dedede inset;
+-webkit-box-shadow:2px 2px 2px 0 #dedede inset;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+background-color:#fff;
+padding:5px;
+font-size:16px;
+vertical-align:middle;
+}
+/* se metto font-size si allarga la casella di ricerca, perchè */
+
+/* submit form ricerca*/
+#searchForm .go{
+background-color:#fff;
+border:1px solid #dedede;
+text-transform:uppercase;
+color:#999;
+padding:8px;
+margin:10px;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+cursor:pointer;
+font: 10px georgia, arial, sans-serif;
+vertical-align:middle;
+}
+
+#search .closeSearch a{
+background-color: #dedede;
+color:#fff;
+height:20px;
+width:20px;
+border-radius:10px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+font: bold 18px georgia, arial, sans-serif;
+position:absolute;
+right:15px;
+top:10px;
+text-align:center;
+text-decoration:none;
+}
+
+#search .closeSearch a:hover{
+background-color:#999;
+}
+
+/* inizio finestra subscribe*/
+#subscribe{
+border:1px solid #ccc;
+box-shadow:0 0 2px 1px #ccc;
+-moz-box-shadow:0 0 2px 1px #ccc;
+-webkit-box-shadow:0 0 2px 1px #ccc;
+position:absolute;
+top:37px;
+right:260px;
+width:210px;
+display:none;
+background:#fff url(../img/noImgSubscribe.png) center top no-repeat;
+padding-bottom:10px; /* perchè è necessario il padding, altrimenti non sta tutto nella finestra*/
+z-index:3;
+}
+
+.buttonSubscribe:hover div#subscribe{
+display:block;
+}
+
+
+#subscribe span:before{
+content:url(../img/frecciaSu.png);
+position:absolute;
+top:-13px;
+left:95px;
+}
+
+/* perchè se metto tag a non lo vede, e bisogna mettere un padding altro per non far andare la scritta sull'immagine*/
+.titleSubscribe{
+font: bold 14px georgia, arial, sans-serif;
+padding:110px 10px 10px 10px;
+margin:0;
+}
+.titleSubscribe a, .titleSubscribe a:visited{
+text-decoration:none;
+color:#000;
+}
+
+.textSubscribe {
+font: 12px georgia, arial, sans-serif;
+padding:10px 10px 30px 10px;
+margin:0;
+}
+
+.textSubscribe a, .textSubscribe a:visited{
+text-decoration:none;
+color:#000;
+}
+
+.option {
+text-align:center;
+margin:8px;
+}
+
+.option a {
+font: 10px georgia, arial, sans-serif;
+text-decoration:none;
+border:1px solid #4682b4;
+color:#4682b4;
+padding:6px 50px;
+background-color:#F0F8FF;
+text-transform:uppercase;
+}
+
+/* modifica impostazione finestra sull'hover*/
+div#subscribe:hover{
+background-color:#F0F8FF;
+}
+div#subscribe:hover .option a{
+background-color:#4682b4;
+color:#fff;
+}
+div#subscribe:hover span:before{
+content:url(../img/frecciaSuCeleste.png);
+position:absolute;
+top:-13px;
+left:95px
 }
 
 #windowLogin{
 width:350px;
 height:550px;
+margin:0 auto;
+top:30px;
 border:1px solid #ccc;
-margin:auto;
-padding:auto;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
 -moz-box-shadow:  0px  0px 3px #dedede;
 -webkit-box-shadow:  0px  0px 3px #dedede;
 box-shadow:0px 0px 3px  #dedede;
-position:relative;
 display:none;
+background-color:#fff;
+position:absolute;
+z-index:2;
+left:37%;
 }
 
-.close a, .close a:visited{
+.close a{
 text-decoration:none;
 position:absolute;
 right:-10px;
@@ -87,7 +411,7 @@ color:#fff;
 background-color:#dedede;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
-border-radius: 20px;
+border-radius: 10px;
 width:20px;
 height:20px;
 border:1px solid #fff;
@@ -110,30 +434,46 @@ margin:0px;
 }
 
 .descriptionLogin{
-font:14px georgia, arial, sans-serif;
+font:13px georgia, arial, sans-serif;
 color:#999;
 text-align:center;
-padding:0 60px;
-margin:5px 0;
+margin:5px 60px;
 }
 p.buttonFacebook{
-padding-bottom:20px;
 text-align:center;
 }
 
-.buttonFacebook  a, .buttonFacebook  a:visited{
-background-color:#3A5896;
+/* lettera f sul bottone*/
+.facebook{
+font:bold 30px tahoma, georgia, arial;
+padding-right:15px;
+vertical-align:middle;
+}
+
+.buttonFacebook  a{
+background-color:#3b5998;
 color:#fff;
-vertical-align:center;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
 text-decoration:none;
-padding:10px 20px;
+padding:10px 10px;
 }
+
+.buttonFacebook  a:hover{
+background-color:#3866c7;
+}
+
 p.buttonGoogle{
 padding-bottom:20px;
-text-align:center
+text-align:center;
+}
+
+/* lettera g sul bottone*/
+.google{
+font:30px roboto, georgia, arial;
+padding-right:15px;
+vertical-align:center;
 }
 
 .buttonGoogle a{
@@ -143,7 +483,12 @@ color:#fff;
 -moz-border-radius: 3px;
 border-radius: 3px;
 text-decoration:none;
-padding:10px 20px;
+padding:10px 20px 10px 10px;
+
+}
+
+.buttonGoogle  a:hover{
+background-color:#f26352;
 }
 
 #formLog{
@@ -156,32 +501,37 @@ position:relative;
 #formLog .or{
 text-transform:uppercase;
 position:absolute;
-top:-25px;
+top:-21px;
 left: 130px;
 background-color:#fff;
 padding:0 10px;
-font:bold 14px georgia, arial, sans-serif;
+font:bold 12px georgia, arial, sans-serif;
 }
 
 #formLog form{
 text-align:center;
-padding-top:15px
+padding-top:15px;
 }
 
+/* caselle accesso*/
 .access{
 margin:10px;
-color:#999;
+padding:6px;
+border:1px solid #e2e2e2;
+box-shadow:1px 2px 3px 1px #e2e2e2 inset;
+-moz-box-shadow:5px 5px 5px #e2e2e2 inset;
+-webkit-box-shadow:5px 5px 5px #e2e2e2 inset;
+background-color:#fff;
 }
-
 
 .check{
 color:#999;
-font:10px Georgia, arial, sans-serif;
+font:12px Georgia, arial, sans-serif;
 float:left;
 }
-.forgot a, .forgot  a:visited{
-color:#999;
-font:10px Georgia, arial, sans-serif;
+.forgot a{
+color:#4682B4;
+font:12px Georgia, arial, sans-serif;
 float:right;
 padding:6px;
 text-decoration:none;
@@ -190,20 +540,24 @@ text-decoration:none;
 .forgot a:hover{
 text-decoration:underline;
 }
+
+/* terms service*/
 .privacy  {
 text-align:center;
 font:10px Georgia, arial, sans-serif;
 width:100%;
 padding-top:30px;
 }
-.privacy a, .privacy a:visited{
+.privacy a{
 text-decoration:none;
 padding:10px;
+color:#999;
 }
 
 .privacy a:hover{
 text-decoration:underline;
 }
+
 .submit{
 text-transform:uppercase;
 background-color:#4682B4;
@@ -212,124 +566,455 @@ font: bold 10px georgia, arial, sans-serif;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
-padding:5px 40px;
+padding:5px 60px;
 cursor:pointer;
 }
 
 .sign{
 text-align:center;
-color:#999;
+color:#666;
+font:12px georgia,arial,sans-serif;
+margin-top:30px;
 }
 
 .sign a{
 color:#4682B4;
 text-decoration:none;
-margin-left:10px;
+margin-left:5px;
 }
+
 .sign a:hover{
 text-decoration:underline;
 }
 
-#subMenu{
+.closeFloat{
+clear:both;
+}
+
+#language{
 position:absolute;
-top:0;
-left:0;
+border-left:1px solid #dedede;
+border-top:1px solid #dedede;
 border-right:1px solid #dedede;
-display:none;
-width:200px;
-box-shadow:0 -6px 6px 2px #dedede;
--moz-box-shadow:0 -6px 6px 2px #dedede;
--webkit-box-shadow:0 -6px 6px 2px #dedede;
+border-top-left-radius:6px;
+border-top-right-radius:6px;
+top:32px;
+left:43%;
 background-color:#fff;
-font: bold 12px georgia,arial, sans-serif;
+text-transform:uppercase;
+padding-top:4px;
 
 }
 
-#subMenu ul{
-list-style-type:none;
-padding:10px 15px;
+#language a{
+text-decoration:none;
+font:10px georgia,arial,sans-serif;
+padding:8px;
+color:#999;
+}
+
+#language a:hover{
+text-decoration:underline;
+}
+
+/* come attivare color black quando linkato*/
+#language a.selected{
+color:#000;
+}
+
+#header{
+border-bottom:2px solid #000;
 margin:0;
-border-bottom:1px solid #dedede;
 }
 
-#subMenu ul  li{
+/* alternativa posizionare i div image in absolute*/
+.imgHeader{
+width:150px;
+height:110px;
+background:#fff url(../img/noImgSubscribe.png) center top no-repeat;
+}
+
+.titleHeader{
+background:#fff url(../img/titleHeader.png) center top no-repeat;
+margin:10px 0 0 80px;
+}
+
+/* inizio piccolo menu sotto titolo header*/
+.subList {
+margin-top:75px;
+font:11px georgia,arial,sans-serif;
 position:relative;
 }
 
-#subMenu ul li a, #subMenu ul li a:visited{
-color:black;
+.date{
+padding-right:8px;
+text-align:center;
+}
+
+.subList > a{
+color:#000;
 text-decoration:none;
-display:block;
-padding:5px;
+border-left:1px solid #dedede;
+padding:0 8px;
+text-align:center;
+
 }
 
-#subMenu ul li a:hover{
-background-color:#99cbff;
-padding:5px;
-border-radius:3px;
--moz-border-radius:3px;
--webkit-border-radius:3px;
+a.linkNew:hover, a.linkVideo:hover{
+text-decoration:underline;
 }
 
-#subMenu > ul > li > ul {
-display:none;
-width:150px;
-position:absolute;
-left: 170px;
-top: 0px;
-border-radius:3px;
--moz-border-radius:3px;
--webkit-border-radius:3px;
-}
-#subMenu > ul > li > ul:before{
-content:url(../img/freccia1.png);
-left:-14px;
-top:5px;
-position:absolute;
+a.linkNew:before{
+content:url(../img/new.png);
+vertical-align:top;
+padding-right:3px;
 }
 
-
-#subMenu ul li:hover ul{
-display:block;
-border:1px solid #dedede;
-background-color:#fff;
-z-index:10;
+a.linkVideo:before{
+content:url(../img/video.png);
+vertical-align:middle;
+padding-right:3px;
 }
 
+a.linkTemp:before{
+content:url(../img/soleP.png);
+vertical-align:top;
+padding-right:3px;
+}
 
-h5 {
-padding:5px 0;
-margin:0;
-color:#999;
-font-weight:normal;
+a.linkBorsa:after{
+content:url(../img/frecciaBorsa.png);
+vertical-align:top;
+padding-left:3px;
+}
+
+a.linkTemp, a.linkBorsa{
 text-transform:uppercase;
+z-index:1;
 }
 
-.arrow:after{
-content:url(../img/freccia.png);
-position:absolute;
-left:165px;
-}
-
-#subMenu > ul > li > ul  > li > ul{
-display:none;
-width:150px;
-position:absolute;
-left: 160px;
-top: -34px;
-}
-
-#subMenu ul li ul li:hover ul{
+a.linkTemp:hover + div.temp{
 display:block;
+}
+
+.var{
+color:#008000;
+}
+
+a.linkTemp:hover, a.linkBorsa:hover{
+background-color:#dedede;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+padding:8px;
+}
+ 
+ /* inizio div attivato con hover meteo*/
+.temp{
+display:none;
+position:absolute;
 border:1px solid #dedede;
+width:350px;
+top:30px;
+left:40%;
 background-color:#fff;
-z-index:10;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
 }
 
-#search{
-position:absolute:
-top:50px;
-width:100%;
-height:50px;
+.temp:before{
+content:url(../img/frecciaSu.png);
+position:absolute;
+top:-14px;
+left:47%;
 }
 
+.pad{
+padding:14px 14px 0 14px;
+}
+
+.temp h3{
+text-transform:uppercase;
+margin:0;
+}
+
+.temp a{
+color:#326891;
+font:10px georgia,arial, sans-serif;
+text-decoration:none;
+padding-top:3px;
+}
+
+.temp a:hover{
+text-decoration:underline;
+}
+
+.today{
+border-top:1px solid #dedede;
+border-bottom:1px solid #dedede;
+margin:15px 0;
+}
+
+.titleDivSubList {
+color:#999;
+text-transform:uppercase;
+font-size:11px;
+margin:4px 0;
+}
+
+.meteo ul{
+background-image:url(../img/soleG.png);
+background-repeat:no-repeat;
+background-position:left 10px;
+border-right:1px solid #dedede;
+padding-right:10px;
+padding-bottom:20px;
+list-style-type:none;
+}
+
+.meteo > ul > li{
+padding:6px;
+font-size:11px
+}
+
+.meteo > ul > li.title{
+font-weight:bold;
+font-size:16px;
+}
+
+.meteo > ul > li > span, .elencoMeteo > ul > li > p> span{
+color:#999;
+}
+
+.imgBunner{
+padding:30px 10px 0 0;
+}
+
+.elencoMeteo ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.elencoMeteo > ul > li.primoGiorno{
+margin-left:0;
+}
+
+.elencoMeteo > ul > li{
+float:left;
+display:inline;
+margin-left:22px;
+text-align:center;
+}
+.giorni{
+text-transform:uppercase;
+font-size:8px;
+}
+
+.more{
+text-transform:uppercase;
+text-align:right;
+font-size:10px;
+color:#326891;
+margin-bottom:14px;
+}
+
+ /* inizio div attivato con hover titoli borsa*/
+ 
+.borsa{
+display:none;
+position:absolute;
+border:1px solid #dedede;
+width:440px;
+top:30px;
+left:47%;
+background-color:#fff;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+
+a.linkBorsa:hover + div.borsa{
+display:block;
+}
+
+.borsa:before{
+content:url(../img/frecciaSu.png);
+position:absolute;
+top:-14px;
+left:47%;
+}
+
+.titleBorsa{
+color:#000;
+}
+
+.titleBorsa span{
+font-size:10px;
+}
+
+.titleRight{
+font:10px georgia,arial, sans-serif;
+padding-top:4px;
+color:#999;
+}
+
+.titoliBorsa{
+border-top:1px solid #dedede;
+border-bottom:1px solid #dedede;
+margin:8px 0;
+}
+
+.tabellaBorsa{
+border-collapse: collapse;
+}
+
+.tabellaBorsa td{
+padding:8px;
+}
+
+.tabellaBorsa tr{
+border-bottom:1px solid #dedede;
+}
+
+tr.terzaRiga{
+border:none;
+}
+
+.tabellaBorsa tr:hover{
+background-color:#dedede;
+cursor:context-menu;
+}
+
+
+.titoli{
+color:#111;
+text-align:left;
+
+}
+
+.azioni{
+font-weight:bold;
+text-align:right;
+
+}
+
+.incremento{
+color:#008000;
+text-align:right;
+}
+
+.grafico{
+list-style-type:none;
+padding:0 0 0 30px;
+margin:6px;
+}
+
+.titleNome{
+color:#dedede;
+padding-bottom:20px;
+}
+
+li.imgGrafico {
+padding-bottom:0;
+
+}
+
+.giornoGrafico{
+color:#666;
+border-top:1px dotted #000;
+margin-top:-3px;
+}
+
+.imgRight{
+padding:10px 0;
+}
+
+.bottomLeft{
+border-right:1px solid #dedede;
+padding-right:12px;
+}
+
+.formTitoli{
+padding:12px 0;
+border-bottom:1px solid #dedede;
+}
+
+.formTitoli input{
+border:1px solid #dedede;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+
+.searchTit{
+padding:6px;
+font-size:12px;
+box-shadow:2px 2px 2px 0 #dedede inset;
+-moz-box-shadow:2px 2px 2px 0 #dedede inset;
+-webkit-box-shadow:2px 2px 2px 0 #dedede inset;
+}
+
+.goTit{
+text-transform:uppercase;
+padding:4px;
+font-size:12px;
+color:#333;
+margin-left:4px;
+cursor:pointer;
+}
+
+.portfolio{
+padding:16px 0 0 0;
+
+}
+
+.portfolio a{
+color:#326891;
+text-decoration:none;
+}
+
+.portfolio a:hover{
+text-decoration:underline;
+}
+
+/* inizio nav*/
+#nav{
+border-bottom:1px solid #dedede;
+text-align:center;
+padding:5px;
+}
+
+#nav ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+#nav ul li{
+display:inline;
+padding:4px;
+}
+
+#nav > ul > li > a {
+text-decoration:none;
+font-size:12px;
+color:#000;
+padding:2px;
+}
+
+#nav > ul > li > a:hover{
+background-color:#dedede;
+}
+
+#nav ul li a.all {
+text-transform:uppercase;
+color:#333;
+font-size:10px;
+}
+
+#nav ul li a.all:hover{
+background-color:#fff;
+text-decoration:underline;
+}

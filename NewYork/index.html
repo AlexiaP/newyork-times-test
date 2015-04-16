@@ -7,268 +7,480 @@
 	<meta name="author" content="Alessandra">
 	<meta name="keyword" content="news, magazine, new york, world, politics, sports, science, technology">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 <div id="overlay"></div>
+<div id="overlaySearch"></div>
 <div id="container">
 	<div id="menu">
-		<span><a href="#" onclick="document.getElementById('subMenu').style.display='block';"><img src="img/menu.png">sections</a></span>
-			<!-- nascondere submenu quando mouse va fuori div submenu-->
-		
-			<div id="subMenu">
+		<div class="left">
+		<div class="left"><a class ="grey-button imgSections" href="#" onclick="document.getElementById('subMenu').style.display='block';document.getElementById('search').style.display='none';document.getElementById('overlaySearch').style.display='none';">sections</a></div>
+			
+		<!-- submenu laterale sinistra-->
+			<div id="subMenu" onmouseleave="document.getElementById('subMenu').style.display='none';">
 				<ul>
 					<li><a href="#">Home Page</a></li>
 					<li><a href="#" class="arrow">World</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>World</h5>
-							<li><a href="#">Africa</a></li>
-							<li><a href="#">America</a></li>
-							<li><a href="#">Asia Pacific</a></li>
-							<li><a href="#">Europe</a></li>
-							<li><a href="#">Middle East</a></li>
-							<li><a href="#">At War</a></li>
-							<li><a href="#">India Ink</a></li>
-							<li><a href="#">Sinosphere</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Africa</a></li>
+								<li><a href="#">America</a></li>
+								<li><a href="#">Asia Pacific</a></li>
+								<li><a href="#">Europe</a></li>
+								<li><a href="#">Middle East</a></li>
+								<li><a href="#">At War</a></li>
+								<li><a href="#">India Ink</a></li>
+								<li><a href="#">Sinosphere</a></li>
+							</ul>
+						</div>
 					</li>
 					<li><a href="#" class="arrow">U.S.</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>U.S.</h5>
-							<li><a href="#">Education</a></li>
-							<li><a href="#">The Upshot</a></li>
-							<li><a href="#">Motherlode</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Education</a></li>
+								<li><a href="#">The Upshot</a></li>
+								<li><a href="#">Motherlode</a></li>
+							</ul>
+						</div>
 					</li>
 					<li><a href="#" class="arrow">Politics</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Politics</h5>
-							<li><a href="#">First Draft</a></li>
-							<li><a href="#">Elections</a></li>
-							<li><a href="#">The Upshot</a></li>
-						</ul>
+							<ul>		
+								<li><a href="#">First Draft</a></li>
+								<li><a href="#">Elections</a></li>
+								<li><a href="#">The Upshot</a></li>
+							</ul>
+							</div>
 					</li>
 					<li><a href="#" class="arrow">New York</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>New York</h5>
-							<li><a href="#">City Room</a></li>
-							<li><a href="#">ArtsBeat </a></li>
-							<li><a href="#">Events</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">City Room</a></li>
+								<li><a href="#">ArtsBeat </a></li>
+								<li><a href="#">Events</a></li>
+							</ul>
+						</div>	
 					</li>	
 					<li><a href="#" class="arrow">Business</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Business</h5>
-							<li><a href="#">DealBook</a></li>
-							<li><a href="#">Economy</a></li>
-							<li><a href="#">Energy</a></li>
-							<li><a href="#">Markets</a></li>
-							<li><a href="#">Media</a></li>
-							<li><a href="#">Small Business</a></li>
-							<li><a href="#">Your Money</a></li>
-							<li><a href="#">Automobiles</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">DealBook</a></li>
+								<li><a href="#">Economy</a></li>
+								<li><a href="#">Energy</a></li>
+								<li><a href="#">Markets</a></li>
+								<li><a href="#">Media</a></li>
+								<li><a href="#">Small Business</a></li>
+								<li><a href="#">Your Money</a></li>
+								<li><a href="#">Automobiles</a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Opinion</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Opinion</h5>
-							<li><a href="#">Op-Ed Columnists</a>
-								<ul class="sub2">
-									<h5>Op-Ed Columnists</h5>
-									<li><a href="#">Charles M. Blow</a></li>
-									<li><a href="#">David Brooks</a></li>
-									<li><a href="#">Frank Bruni</a></li>
-									<li><a href="#">Roger Cohen</a></li>
-									<li><a href="#">Gail Collins</a></li>
-									<li><a href="#">Ross Douthat</a></li>
-									<li><a href="#">Maureen Dowd</a></li>
-									<li><a href="#">Thomas L. Friedman</a></li>
-									<li><a href="#">Nicholas Kristof</a></li>
-									<li><a href="#">Paul Krugman</a></li>
-									<li><a href="#">Joe Nocera</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Editorials </a></li>
-							<li><a href="#">Contributing Writers</a></li>
-							<li><a href="#">Op-Ed Contributors</a></li>
-							<li><a href="#">Opinionator</a></li>
-							<li><a href="#">Letters</a></li>
-							<li><a href="#">Sunday Review</a></li>
-							<li><a href="#">Taking Note</a></li>
-							<li><a href="#">Room For Debate</a></li>
-							<li><a href="#">Public Editor</a></li>
-							<li><a href="#">Cartoons</a></li>
-						</ul>
+							<ul>
+								<li><a class="sub2" href="#">Op-Ed Columnists</a>
+									<!-- third level subMenu-->
+									<div class="thirdSubMenu">
+										<h5>Op-Ed Columnists</h5>
+										<ul>
+											<li><a href="#">Charles M. Blow</a></li>
+											<li><a href="#">David Brooks</a></li>
+											<li><a href="#">Frank Bruni</a></li>
+											<li><a href="#">Roger Cohen</a></li>
+											<li><a href="#">Gail Collins</a></li>
+											<li><a href="#">Ross Douthat</a></li>
+											<li><a href="#">Maureen Dowd</a></li>
+											<li><a href="#">Thomas L. Friedman</a></li>
+											<li><a href="#">Nicholas Kristof</a></li>
+											<li><a href="#">Paul Krugman</a></li>
+											<li><a href="#">Joe Nocera</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Editorials </a></li>
+								<li><a href="#">Contributing Writers</a></li>
+								<li><a href="#">Op-Ed Contributors</a></li>
+								<li><a href="#">Opinionator</a></li>
+								<li><a href="#">Letters</a></li>
+								<li><a href="#">Sunday Review</a></li>
+								<li><a href="#">Taking Note</a></li>
+								<li><a href="#">Room For Debate</a></li>
+								<li><a href="#">Public Editor</a></li>
+								<li><a href="#">Cartoons</a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Technology</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Technology</h5>
-							<li><a href="#">Bits</a></li>
-							<li><a href="#">Personal Tech </a></li>
-						</ul>
+							<ul>	
+								<li><a href="#">Bits</a></li>
+								<li><a href="#">Personal Tech </a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Science</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Science</h5>
-							<li><a href="#">Environment</a></li>
-							<li><a href="#">Space & Cosmos</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Environment</a></li>
+								<li><a href="#">Space & Cosmos</a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Health</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Health</h5>
-							<li><a href="#">Well</a></li>
-							<li><a href="#">Money & Policy </a></li>
-							<li><a href="#">Health Guide</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Well</a></li>
+								<li><a href="#">Money & Policy </a></li>
+								<li><a href="#">Health Guide</a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Sport</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Sport</h5>
-							<li><a href="#">Baseball</a></li>
-							<li><a href="#">Basketball: College </a></li>
-							<li><a href="#">Basketball: N.B.A.</a></li>
-							<li><a href="#">Football: College </a></li>
-							<li><a href="#">Football: N.F.A. </a></li>
-							<li><a href="#">Golf</a></li>
-							<li><a href="#">Hokey</a></li>
-							<li><a href="#">Soccer</a></li>
-							<li><a href="#">Tennis</a></li>
-						</ul>
+							<ul>	
+								<li><a href="#">Baseball</a></li>
+								<li><a href="#">Basketball: College </a></li>
+								<li><a href="#">Basketball: N.B.A.</a></li>
+								<li><a href="#">Football: College </a></li>
+								<li><a href="#">Football: N.F.A. </a></li>
+								<li><a href="#">Golf</a></li>
+								<li><a href="#">Hokey</a></li>
+								<li><a href="#">Soccer</a></li>
+								<li><a href="#">Tennis</a></li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 				<ul>
 					<li><a href="#" class="arrow">Arts</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Arts</h5>
-							<li><a href="#">Art & Design</a></li>
-							<li><a href="#">ArtsBeat </a></li>
-							<li><a href="#">Books</a></li>
-							<li><a href="#">Dance</a></li>
-							<li><a href="#">Movie</a></li>
-							<li><a href="#">Music</a></li>
-							<li><a href="#">N.Y.C. Events Guide</a></li>
-							<li><a href="#">Television</a></li>
-							<li><a href="#">Theater</a></li>
-							<li><a href="#">Video Games</a></li>
-						</ul>
+							<ul>	
+								<li><a href="#">Art & Design</a></li>
+								<li><a href="#">ArtsBeat </a></li>
+								<li><a href="#">Books</a></li>
+								<li><a href="#">Dance</a></li>
+								<li><a href="#">Movie</a></li>
+								<li><a href="#">Music</a></li>
+								<li><a href="#">N.Y.C. Events Guide</a></li>
+								<li><a href="#">Television</a></li>
+								<li><a href="#">Theater</a></li>
+								<li><a href="#">Video Games</a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Fashion & Style</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Fashion & Style</h5>
-							<li><a href="#">Men's Style</a></li>
-							<li><a href="#">T Magazine </a></li>
-							<li><a href="#">On The Runway</a></li>
-							<li><a href="#">Weddings</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Men's Style</a></li>
+								<li><a href="#">T Magazine </a></li>
+								<li><a href="#">On The Runway</a></li>
+								<li><a href="#">Weddings</a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#" class="arrow">Food</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Food</h5>
-							<li><a href="#">Cooking</a></li>
-							<li><a href="#">Restaurant Search </a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Cooking</a></li>
+								<li><a href="#">Restaurant Search </a></li>
+							</ul>
+						</div>
 					</li>	
 					<li><a href="#">Home & Garden</a></li>
 					<li><a href="#">Travel</a></li>
 					<li><a href="#">Magazine</a></li>
 					<li><a href="#">Real Estate</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Real Estate</h5>
-							<li><a href="#">Commercial Real Estate</a></li>
-							<li><a href="#">Great Homes & Destination </a></li>
-							<li><a href="#">My Real Estate</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Commercial Real Estate</a></li>
+								<li><a href="#">Great Homes & Destination </a></li>
+								<li><a href="#">My Real Estate</a></li>
+							</ul>
+						</div>
 					</li>	
 				</ul>
 				<ul>
 					<li><a href="#" class="arrow">Video</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Video</h5>
-							<li><a href="#">U.S. & Politics</a></li>
-							<li><a href="#">International</a></li>
-							<li><a href="#">New York</a></li>
-							<li><a href="#">Op-Docs</a></li>
-							<li><a href="#">Opinion</a></li>
-							<li><a href="#">Times Documentaries</a></li>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Technology</a></li>
-							<li><a href="#">Culture</a></li>
-							<li><a href="#">Style</a></li>
-							<li><a href="#">Health</a></li>
-							<li><a href="#">Food</a></li>
-							<li><a href="#">Travel</a></li>
-							<li><a href="#">Sports</a></li>
-							<li><a href="#">Real Estate</a></li>
-							<li><a href="#">Science</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">U.S. & Politics</a></li>
+								<li><a href="#">International</a></li>
+								<li><a href="#">New York</a></li>
+								<li><a href="#">Op-Docs</a></li>
+								<li><a href="#">Opinion</a></li>
+								<li><a href="#">Times Documentaries</a></li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Technology</a></li>
+								<li><a href="#">Culture</a></li>
+								<li><a href="#">Style</a></li>
+								<li><a href="#">Health</a></li>
+								<li><a href="#">Food</a></li>
+								<li><a href="#">Travel</a></li>
+								<li><a href="#">Sports</a></li>
+								<li><a href="#">Real Estate</a></li>
+								<li><a href="#">Science</a></li>
+							</ul>
+						</div>
 					</li>		
 					<li><a href="#">The Upshot</a></li>
 					<li><a href="#" class="arrow">Conferences</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>Conferences</h5>
-							<li><a href="#">Women in the World</a></li>
-							<li><a href="#">Cities for tomorrow </a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Women in the World</a></li>
+								<li><a href="#">Cities for tomorrow </a></li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 				<ul>
 					<li><a href="#" class="arrow">More</a>
-						<ul>
+						<!-- second level subMenu-->
+						<div class="subDiv">
 							<h5>More</h5>
-							<li><a href="#">Crossword</a></li>
-							<li><a href="#">Times Premier </a></li>
-							<li><a href="#">Today's Paper</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Corrections</a></li>
-							<li><a href="#">Obituaries</a></li>
-							<li><a href="#">Multimedia </a></li>
-							<li><a href="#">Photography</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Classifieds</a></li>
-							<li><a href="#">Tools & Services</a></li>
-							<li><a href="#">Jobs </a></li>
-							<li><a href="#">Times Topics</a></li>
-							<li><a href="#">Blogs</a></li>
-							<li><a href="#">NYT Store</a></li>
-							<li><a href="#">Times Journeys</a></li>
-							<li><a href="#">Subscribe</a></li>
-							<li><a href="#">Manage Account</a></li>
-						</ul>
+							<ul>
+								<li><a href="#">Crossword</a></li>
+								<li><a href="#">Times Premier </a></li>
+								<li><a href="#">Today's Paper</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Corrections</a></li>
+								<li><a href="#">Obituaries</a></li>
+								<li><a href="#">Multimedia </a></li>
+								<li><a href="#">Photography</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Classifieds</a></li>
+								<li><a href="#">Tools & Services</a></li>
+								<li><a href="#">Jobs </a></li>
+								<li><a href="#">Times Topics</a></li>
+								<li><a href="#">Blogs</a></li>
+								<li><a href="#">NYT Store</a></li>
+								<li><a href="#">Times Journeys</a></li>
+								<li><a href="#">Subscribe</a></li>
+								<li><a href="#">Manage Account</a></li>
+							</ul>
+						</div>
 					</li>	
 				</ul>
 			</div>
-		<span><a href="#"><img src="img/search.png">search</a>
+		<div class="right">
+			<a class ="grey-button imgSearch" href="#" onclick="document.getElementById('search').style.display='block';document.getElementById('overlaySearch').style.display='block';document.getElementById('subMenu').style.display='none';document.getElementById('language').style.display='none';document.getElementById('subscribe').style.display='none';document.getElementById('header').style.display='none'">search</a>
 			<div id="search">
+				<span class="closeSearch"><a href="#" onclick="document.getElementById('search').style.display='none';document.getElementById('overlaySearch').style.display='none';document.getElementById('language').style.display='block';document.getElementById('header').style.display='block'">&times;</a> </span> 
+				<form id="searchForm" action="#" method="get">
+					<p><input class="textsearch" type="text" name="search" value="" size="65">
+					<input class="go" type="submit" value="go"></p>
+				</form>
 			</div>
-		</span>
-		<div id="right">
-			<span class="buttonLogin"><a href="#">Subscribe now</a></span>
-			<span class="buttonLogin"><a href="#windowLogin" onclick="document.getElementById('windowLogin').style.display='block'; document.getElementById('overlay').style.display='block'">log in</a></span>
-			<span><a href="#"><img src="img/ingranaggio.png"></a></span>
 		</div>
+		</div>
+		<div class="right">
+		<div class="left">
+			<div class="buttonSubscribe left"><a href="#" class="blue-button">Subscribe now</a>
+				<div id="subscribe">
+					<span class="freccia"></span>
+					<h4 class="titleSubscribe"><a href="#">Try a Digital Subscription to the New York Times for Just € 1</a></h4>
+					<p class="textSubscribe"><a href="#">Get unlimited access to NYTimes.com & NYTimes apps.</a></p>
+					<p class="option"><a href="#">See my options</a></p>
+				</div>
+			</div>
+			<span class="right"><a class="blue-button" href="#windowLogin" onclick="document.getElementById('windowLogin').style.display='block'; document.getElementById('overlay').style.display='block';document.getElementById('search').style.display='none'; document.getElementById('overlaySearch').style.display='none';document.getElementById('subMenu').style.display='none';">log in</a></span>
+		</div>
+			<div class="right"><a class ="grey-button imgImpostazioni" href="#"></a></div>
+		</div>
+		<div class="closeFloat"></div>
+		<div id="language"><a class="selected" href="#">u.s.</a><a href="#">international</a><a href="#">中文</a></div>
 	</div>
-		<div id="windowLogin">
+		
+	<div id="header">
+		<div class="left">
+			<div class="left imgHeader"></div>
+			<div class="right titleHeader">
+				<div class="subList">
+				<span class="date">Monday, April 13, 2015</span>
+				<a class="linkNew" href="#">Today’s Paper</a>
+				<a class="linkVideo" href="#">Video</a>
+				<a class="linkTemp" href="#">60°F</a>
+					<div class="temp">
+						<div class="pad">
+							<h3 class="left">New York, NY</h3>
+							<a href="#" class="right">Edit Your Location</a>
+							<div class="closeFloat"></div>
+							<div class="today">
+								<div class="meteo left">
+									<h6 class="titleDivSubList">Today</h6>
+									<ul>
+										<li class="title">60°F Sun</li>
+										<li>68° <span>46°</span></li>
+										<li>Mostly sunny</li>
+									</ul>
+								</div>
+								<div class="imgBunner right"><img src="http://placehold.it/140x100"></div>
+							<div class="closeFloat"></div>
+							</div>
+							<div class="elencoMeteo">
+							<h6 class="titleDivSubList">This Week</h6>
+								<ul>
+									<li class="primoGiorno">
+										<img src="img/soleG.png" alt="tempo">
+										<p class="giorni">wed</p>
+										<p>59° <span>47°</span></p>
+									</li>
+									<li>
+										<img src="img/soleG.png" alt="tempo">
+										<p class="giorni">thurs</p>
+										<p>64° <span>52°</span></p>
+									</li>
+									<li>
+										<img src="img/soleG.png" alt="tempo">
+										<p class="giorni">fri</p>
+										<p>70° <span>50°</span></p>
+									</li>
+									<li>
+										<img src="img/soleG.png" alt="tempo">
+										<p class="giorni">sat</p>
+										<p>62° <span>46°</span></p>
+									</li>
+									<li>
+										<img src="img/soleG.png" alt="tempo">
+										<p class="giorni">sun</p>
+										<p>58° <span>50°</span></p>
+									</li>
+								</ul>
+								<div class="closeFloat"></div>
+								<p class="more"><a href="#">more >></a></p>
+							</div>
+						</div>
+					</div>
+				<a class="linkBorsa" href="#">dax <span class="var">+0.04%</span></a>
+					<div class="borsa">
+						<div class="pad">
+							<h6 class="left titleDivSubList titleBorsa">Markets <span class="freccette">>></span></h6>
+							<span class="right titleRight">Updated just now</span> 
+							<div class="closeFloat"></div>
+							<div class="titoliBorsa">
+								<table class="left tabellaBorsa">
+									<tr>
+										<td class="titoli">S. & P. 500</td>
+										<td class="azioni">2107.96</td>
+										<td class="incremento">+12.12</td>
+										<td class="incremento">+0.58%</td>
+									</tr>
+									<tr>
+										<td class="titoli">Dow</td> 
+										<td class="azioni">18117.24</td>
+										<td class="incremento">+80.54</td>
+										<td class="incremento">+0.45%</td>
+									</tr>
+									<tr class="terzaRiga">
+										<td class="titoli">Nasdaq</td>
+										<td class="azioni">5009.16 </td>
+										<td class="incremento">+31.88</td>
+										<td class="incremento">+0.64%</td>
+									</tr>
+								</table>
+								<ul class="right grafico">
+									<li class="titleNome">Nasdaq</li>
+									<li class="imgGrafico"><img src="http://placehold.it/100x60"></li>
+									<li class="giornoGrafico">Wednesday</li>
+								</ul>
+															<div class="closeFloat"></div>
+
+							</div>
+							<div class="bottomLeft left">
+									<h6 class="titleDivSubList titleBorsa">Get quotes</h6>
+									<form action="#" method="get" class="formTitoli">
+										<input type="text" size="30" placeholder="Stock ETFs Founds" class="searchTit">
+										<input type="submit" value="go" class="goTit">
+									</form>
+								<div class="portfolio"><a href="#">My Portfolio >></a></div>
+							</div>
+							<div class="imgRight right"><img src="http://placehold.it/140x100"></div>
+																						<div class="closeFloat"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right imgHeader"></div>
+				<div class="closeFloat"></div>
+	</div>
+	
+	<div id="nav">
+		<ul>
+			<li><a href="#">World</a></li>
+			<li><a href="#">U.S.</a></li>
+			<li><a href="#">Politics</a></li>
+			<li><a href="#">New York</a></li>
+			<li><a href="#">Business</a></li>
+			<li><a href="#">Opinion</a></li>
+			<li><a href="#">Technology</a></li>
+			<li><a href="#">Science</a></li>
+			<li><a href="#">Health</a></li>
+			<li><a href="#">Sports</a></li>
+			<li><a href="#">Arts</a></li>
+			<li><a href="#">Style</a></li>
+			<li><a href="#">Food</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Travel</a></li>
+			<li><a href="#">Magazine</a></li>
+			<li><a href="#">Real Estate</a></li>
+			<li><a class="all" href="#">All</a></li>
+
+		</ul>
+	</div>
+	
+</div>
+<div id="windowLogin">
 			<span class="close"><a href="#" onclick="document.getElementById('windowLogin').style.display='none';document.getElementById('overlay').style.display='none'">&times;</a></span>
 			<p class="titleLogin">Log in</p>
 			<p class="descriptionLogin">To save articles or get newsletters, alerts or recommendations – all free.</p>
-			<p class="buttonFacebook"><a href="#">Log in with Facebook</a></p>
-			<p class="buttonGoogle"><a href="#">Log in with Google</a></p>
+			<p class="buttonFacebook"><a href="#"><span class="facebook">f</span>Log in with Facebook</a></p>
+			<p class="buttonGoogle"><a href="#"><span class="google">g</span>Log in with Google</a></p>
 			<div id="formLog">
 				<p class="or">or</p>
 				<form action="#" method="get">
-					<input  class="access" type="text" name="Nome" value="Email address" size="40">
-					<input class="access" type="password" name="Pass" value="Password" size="40">
+					<div><input class="access" type="text" name="Nome" placeholder="Email address" size="40">
+					<input class="access" type="password" name="Pass" placeholder="Password" size="40">
 					<span class="check"><input type="checkbox" checked> Remember me</span>
 					<span class="forgot"><a href="#">Forgot password?</a></span>
 					<p class="privacy"><a href="#">Terms of service</a><a href="#">Privacy Policy</a></p>
-					<input class="submit" type="submit" value="Log in">
+					<input class="submit" type="submit" value="Log in"></div>
 				</form>
 				<p class="sign">Don't have an account?<a href="#">Sign up</a></p>
 			</div>
 		</div>
-</div>
 </body>
 </html>
