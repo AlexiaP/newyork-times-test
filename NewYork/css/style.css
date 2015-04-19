@@ -625,25 +625,21 @@ color:#000;
 #header{
 border-bottom:2px solid #000;
 margin:0;
+padding:8px 0 3px 0;
 }
 
 /* alternativa posizionare i div image in absolute*/
-.imgHeader{
-width:150px;
-height:110px;
-background:#fff url(../img/noImgSubscribe.png) center top no-repeat;
-}
+
 
 .titleHeader{
-background:#fff url(../img/titleHeader.png) center top no-repeat;
-margin:10px 0 0 80px;
+margin-left:65px;
 }
 
 /* inizio piccolo menu sotto titolo header*/
 .subList {
-margin-top:75px;
 font:11px georgia,arial,sans-serif;
 position:relative;
+left:40px;
 }
 
 .date{
@@ -657,7 +653,6 @@ text-decoration:none;
 border-left:1px solid #dedede;
 padding:0 8px;
 text-align:center;
-
 }
 
 a.linkNew:hover, a.linkVideo:hover{
@@ -897,7 +892,6 @@ text-align:left;
 .azioni{
 font-weight:bold;
 text-align:right;
-
 }
 
 .incremento{
@@ -981,9 +975,8 @@ text-decoration:underline;
 
 /* inizio nav*/
 #nav{
-border-bottom:1px solid #dedede;
 text-align:center;
-padding:5px;
+padding:5px 0;
 }
 
 #nav ul{
@@ -1017,4 +1010,333 @@ font-size:10px;
 #nav ul li a.all:hover{
 background-color:#fff;
 text-decoration:underline;
+}
+
+#content{
+padding:10px 0;
+}
+
+#digital{
+background:#fff url(http://placehold.it/960x40) center no-repeat;
+width:960px;
+height:40px;
+padding:10px 0;
+border-top:1px solid #dedede;
+border-bottom:1px solid #dedede;
+}
+
+.colLeft{
+width:600px;
+border-right:1px solid #dedede;
+margin-bottom:10px;
+}
+
+.articleColLeft{
+width:190px;
+border-right:1px solid #dedede;
+margin-bottom:10px;
+
+}
+
+.article{
+border-bottom:1px solid #dedede;
+margin-right:10px;
+padding-bottom:10px;
+}
+
+.article p, .article h2{
+padding:0;
+margin:0;
+}
+
+h2.firstArticle a{
+font:italic bold 20px georgia,arial,sans-serif;
+margin-bottom:4px;
+color:#000;
+text-decoration:none;
+}
+
+h2.firstArticle a:hover{
+text-decoration:underline;
+}
+
+p.author{
+font-size:10px;
+color:#999;
+}
+
+span.upper{
+text-transform:uppercase;
+}
+
+span.time{
+text-transform:uppercase;
+color:#a81817;
+font-size:10px;
+font-weight:normal;
+}
+
+p.update{
+font-size:10px;
+color:#a81817;
+}
+
+p.contentArticle{
+color:#333;
+}
+
+.contentArticle a img{
+float:right;
+margin:4px 0 4px 4px;
+}
+
+p.comment a{
+color:#326891;
+font-size:12px;
+background-image:url(../img/commenti.png);
+background-repeat:no-repeat;
+background-position:left center;
+text-decoration:none;
+}
+
+p.comment a:hover{
+text-decoration:underline;
+}
+
+.comment span{
+margin-left:10px;
+}
+
+.articleColRight{
+width:400px;
+padding-right:5px;
+}
+
+.colRight{
+width:350px;
+}
+
+h2.nextArticle a{
+margin:10px 0 4px 0;
+font:italic bold 17px georgia,arial,sans-serif;
+color:#000;
+text-decoration:none;
+}
+
+h2.nextArticle a:hover{
+text-decoration:underline;
+}
+
+.article h6, .articleCentre h6, .elencoRight h6{
+text-transform:uppercase;
+margin:15px 0 0 0;
+padding:0;
+color:#666;
+font-size:9px;
+font-weight:normal;
+}
+
+.articleCentre{
+margin:0 6px;
+border-bottom:1px solid #dedede;
+padding-bottom:12px;
+}
+
+.articleCentre p, .articleCentre h2 {
+margin:0;
+padding:0;
+}
+
+.slideImg{
+border:none;
+padding:0;
+}
+
+p.posImage{
+text-align:center;
+margin:0;
+}
+
+p.posImage img{
+width:100%;
+}
+
+p.didascalia{
+color:#999;
+font-size:10px;
+margin-top:0;
+padding-bottom:10px;
+}
+
+h2.centre a{
+font-style:normal;
+font-weight:600;
+}
+
+ul.linkArticle{
+font:bold 6px georgia, arial, sans-serif;
+margin:4px 0 0 6px;
+padding:0;
+list-style-position:outside;
+list-style-type:disc;
+}
+
+ul.linkArticle > li{
+margin-bottom:3px;
+}
+
+ul.linkArticle > li > a{
+font:bold 11px georgia, arial, sans-serif;
+color:#000;
+text-decoration:none;
+vertical-align:-10%;
+}
+
+ul.linkArticle > li > a:hover{
+text-decoration:underline;
+}
+
+/* riga divisoria doppia*/
+p.riga{
+border-bottom:1px solid #dedede;
+padding:1px;
+border-top:2px solid #dedede;
+margin-top:16px;
+}
+
+p.imgCentre a img{
+float:right;
+margin:-10px 0 4px 4px;
+}
+
+
+h3.titleCentre a, h3.titleCentre{
+margin:10px 0 2px 0;
+font:13px georgia,arial,sans-serif;
+color:#000;
+font-weight:600;
+text-decoration:none;
+}
+
+h3.titleCentre a:hover{
+text-decoration:underline;
+}
+
+.noBold{
+font-weight:normal;
+}
+
+.ultimoArticle{
+ border:none;
+ }
+.rigaUltima{
+ margin-right:10px;
+ }
+ 
+ .elencoArticle{
+ color:#555;
+ }
+ 
+
+ .ultimiArticleLeft ul{
+ list-style-type:none;
+ margin:0 auto;
+ padding:0;
+ }
+ 
+ .ultimiArticleLeft  ul  li{
+ float:left;
+ width:180px;
+ padding-right:10px;
+ }
+ 
+ .ultimiArticleLeft ul li p{
+ margin:0;
+ }
+
+.primiLi{
+border-right:1px solid #dedede;
+margin-right:10px;
+}
+
+.ultimoLi{
+ border:none;
+ }
+ 
+ h3.titleRight a, h3.titleRight{
+margin:0;
+padding:0;
+font:13px georgia,arial,sans-serif;
+color:#000;
+font-weight:600;
+text-decoration:none;
+text-align:center;
+}
+
+h3.titleRight a:hover{
+text-decoration:underline;
+}
+
+.elencoRight{
+list-style-type:none;
+margin:0;
+padding:5px 0 0 0;
+}
+ 
+.elencoRight li{
+float:left;
+width:160px;
+clear:right
+}
+ 
+.primoLiElenco{
+border-right:1px solid #dedede;
+padding-right:10px;
+margin-right:10px;
+margin-bottom:23px;
+ }
+  
+.elencoRight p, .elencoRight h2 {
+margin:0;
+padding:0;
+}
+
+.banner{
+border-top:1px solid #dedede;
+border-bottom:4px solid #dedede;
+text-align:center;
+padding: 10px 0;
+}
+
+.titleArticleRight{
+font-size:18px;
+font-weight:bold;
+color:#222;
+margin:4px 0;
+}
+
+.articleRight{
+border-top:1px solid #dedede;
+padding:20px 0;
+}
+
+.articleRight h4{
+margin:0;
+}
+
+.articleRight h4 a{
+font-weight:normal;
+color:#222;
+font-size:18px;
+text-decoration:none;
+}
+
+.articleRight img{
+float:right;
+padding-left:10px;
+}
+
+.articleRight p{
+font-size:13px;
+color:#555;
 }
