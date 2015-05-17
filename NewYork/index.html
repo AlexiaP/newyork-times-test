@@ -9,15 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div id="overlay"></div>
-<div id="overlaySearch"></div>
 <div id="container">
+	<div id="header">
 	<div id="menu">
 		<div class="left">
-		<div class="left"><a class ="grey-button imgSections" href="#" onclick="document.getElementById('subMenu').style.display='block';document.getElementById('search').style.display='none';document.getElementById('overlaySearch').style.display='none';">sections</a></div>
-			
-		<!-- submenu laterale sinistra-->
-			<div id="subMenu" onmouseleave="document.getElementById('subMenu').style.display='none';">
+			<div class="left"><a class ="grey-button imgSections" href="#" onclick="document.getElementById('subMenu').style.display='block';document.getElementById('search').style.display='none';document.getElementById('overlaySearch').style.display='none';document.getElementById('language').style.display='block'; document.getElementById('titleNY').style.display='block';document.getElementById('nav').style.display='block';"><span>sections</span></a>
+			</div>
+			<!-- submenu laterale sinistra-->
+				<div id="subMenu" onmouseleave="document.getElementById('subMenu').style.display='none';">
 				<ul>
 					<li><a href="#">Home Page</a></li>
 					<li><a href="#" class="arrow">World</a>
@@ -295,89 +294,102 @@
 					</li>	
 				</ul>
 			</div>
-		<div class="right">
-			<a class ="grey-button imgSearch" href="#" onclick="document.getElementById('search').style.display='block';document.getElementById('overlaySearch').style.display='block';document.getElementById('subMenu').style.display='none';document.getElementById('language').style.display='none';document.getElementById('subscribe').style.display='none';document.getElementById('header').style.display='none'">search</a>
-			<div id="search">
-				<span class="closeSearch"><a href="#" onclick="document.getElementById('search').style.display='none';document.getElementById('overlaySearch').style.display='none';document.getElementById('language').style.display='block';document.getElementById('header').style.display='block'">&times;</a> </span> 
-				<form id="searchForm" action="#" method="get">
-					<p><input class="textsearch" type="text" name="search" value="" size="65">
-					<input class="go" type="submit" value="go"></p>
-				</form>
+			<div class="right">
+				<a class ="grey-button imgSearch" href="#" onclick="document.getElementById('search').style.display='block';document.getElementById('overlaySearch').style.display='block';document.getElementById('subMenu').style.display='none';document.getElementById('language').style.display='none';document.getElementById('nav').style.display='none';document.getElementById('titleNY').style.display='none'"><span>search</span></a>
+				<div id="search">
+					<span class="closeSearch"><a href="#" onclick="document.getElementById('search').style.display='none';document.getElementById('overlaySearch').style.display='none';document.getElementById('language').style.display='block';document.getElementById('nav').style.display='block';document.getElementById('titleNY').style.display='block'">&times;</a> </span> 
+					<form id="searchForm" action="#" method="get">
+						<p>
+						<input class="textsearch" type="text" name="search" value="" size="75">
+						<input class="go" type="submit" value="go">
+						</p>
+					</form>
+				</div>
 			</div>
-		</div>
 		</div>
 		<div class="right">
 		<div class="left">
 			<div class="buttonSubscribe left"><a href="#" class="blue-button">Subscribe now</a>
 				<div id="subscribe">
 					<span class="freccia"></span>
-					<h4 class="titleSubscribe"><a href="#">Try a Digital Subscription to the New York Times for Just € 1</a></h4>
+					<h5 class="titleSubscribe"><a href="#">Try a Digital Subscription to the New York Times for Just € 1</a></h5>
 					<p class="textSubscribe"><a href="#">Get unlimited access to NYTimes.com & NYTimes apps.</a></p>
 					<p class="option"><a href="#">See my options</a></p>
 				</div>
 			</div>
 			<span class="right"><a class="blue-button" href="#windowLogin" onclick="document.getElementById('windowLogin').style.display='block'; document.getElementById('overlay').style.display='block';document.getElementById('search').style.display='none'; document.getElementById('overlaySearch').style.display='none';document.getElementById('subMenu').style.display='none';">log in</a></span>
 		</div>
-			<div class="right"><a class ="grey-button imgImpostazioni" href="#"></a></div>
+		<!-- span vuoto per dare il padding -->
+			<div class="right"><a class ="grey-button imgImpostazioni" href="#"><span></span></a></div>
 		</div>
-		<div class="closeFloat"></div>
-		<div id="language"><a class="selected" href="#">u.s.</a><a href="#">international</a><a href="#">中文</a></div>
+		<!-- <div class="closeFloat"></div> eliminato, verificare se serve-->
 	</div>
-		
-	<div id="header">
+			<div id="language"><a class="selected" href="#">u.s.</a><a href="#">international</a><a href="#">中文</a></div>
+	<div id="titleNY">
 		<div class="left">
 			<div class="left"><a href="#"><img src="http://placehold.it/180x90" alt="banner"></a></div>
 			<div class="right">
-			<a  class="titleHeader" href="#"><img src="img/titleHeader.png" alt="title"></a>
+			<div id="logo"><h1><a href="#">The New York Times</a></h1></div>
 				<div class="subList">
-				<span class="date">Monday, April 13, 2015</span>
-				<a class="linkNew" href="#">Today’s Paper</a>
-				<a class="linkVideo" href="#">Video</a>
-				<a class="linkTemp" href="#">60°F</a>
+				<ul>
+				<li class="date">Monday, April 13, 2015</li>
+				<li><a class="linkNew" href="#">Today’s Paper</a></li>
+				<li><a class="linkVideo" href="#">Video</a></li>
+				<li class="linkTemp"><a href="#">60°F</a>
 					<div class="temp">
 						<div class="pad">
-							<h3 class="left">New York, NY</h3>
-							<a href="#" class="right">Edit Your Location</a>
+							<h5 class="left">New York, NY</h5>
+							<a href="#" class="right">Edit your location</a>
 							<div class="closeFloat"></div>
 							<div class="today">
 								<div class="meteo left">
 									<h6 class="titleDivSubList">Today</h6>
 									<ul>
 										<li class="title">60°F Sun</li>
-										<li>68° <span>46°</span></li>
+										<li>68° <span class="tempMin">46°</span></li>
 										<li>Mostly sunny</li>
 									</ul>
 								</div>
-								<div class="imgBunner right"><img src="http://placehold.it/140x100" alt="banner meteo"></div>
+								<div class="imgBunner right"><img src="http://placehold.it/140x80" alt="banner meteo"></div>
 							<div class="closeFloat"></div>
 							</div>
 							<div class="elencoMeteo">
 							<h6 class="titleDivSubList">This Week</h6>
 								<ul>
 									<li class="primoGiorno">
-										<img src="img/soleG.png" alt="tempo">
-										<p class="giorni">wed</p>
-										<p>59° <span>47°</span></p>
+										<ul>
+											<li><img src="img/soleG.png" alt="tempo"></li>
+											<li class="giorni">wed</li>
+											<li>59° <span class="tempMin">47°</span></li>
+										</ul>
 									</li>
 									<li>
-										<img src="img/soleG.png" alt="tempo">
-										<p class="giorni">thurs</p>
-										<p>64° <span>52°</span></p>
+										<ul>
+											<li><img src="img/soleG.png" alt="tempo"></li>
+											<li class="giorni">thurs</li>
+											<li>64° <span class="tempMin">52°</span></li>
+										</ul>
 									</li>
 									<li>
-										<img src="img/soleG.png" alt="tempo">
-										<p class="giorni">fri</p>
-										<p>70° <span>50°</span></p>
+										<ul>
+											<li><img src="img/soleG.png" alt="tempo"></li>
+											<li class="giorni">fri</li>
+											<li>70° <span class="tempMin">50°</span></li>
+										</ul>
 									</li>
 									<li>
-										<img src="img/soleG.png" alt="tempo">
-										<p class="giorni">sat</p>
-										<p>62° <span>46°</span></p>
+										<ul>
+											<li><img src="img/soleG.png" alt="tempo"></li>
+											<li class="giorni">sat</li>
+											<li>62° <span class="tempMin">46°</span></li>
+										</ul>
 									</li>
 									<li>
-										<img src="img/soleG.png" alt="tempo">
-										<p class="giorni">sun</p>
-										<p>58° <span>50°</span></p>
+										<ul>
+											<li><img src="img/soleG.png" alt="tempo"></li>
+											<li class="giorni">sun</li>
+											<li>58° <span class="tempMin">50°</span></li>
+										</ul>
 									</li>
 								</ul>
 								<div class="closeFloat"></div>
@@ -385,10 +397,11 @@
 							</div>
 						</div>
 					</div>
-				<a class="linkBorsa" href="#">dax <span class="var">+0.04%</span></a>
+				</li>
+				<li class="linkBorsa"><a href="#">dax <span class="var">+0.04%</span></a>
 					<div class="borsa">
 						<div class="pad">
-							<h6 class="left titleDivSubList titleBorsa">Markets <span class="freccette">>></span></h6>
+							<h5 class="left titleDivSubList titleBorsa">Markets <span>>></span></h5>
 							<span class="right titleRight">Updated just now</span> 
 							<div class="closeFloat"></div>
 							<div class="titoliBorsa">
@@ -421,24 +434,27 @@
 
 							</div>
 							<div class="bottomLeft left">
-									<h6 class="titleDivSubList titleBorsa">Get quotes</h6>
+									<h5 class="titleDivSubList titleBorsa">Get quotes</h5>
 									<form action="#" method="get" class="formTitoli">
 										<div><input type="text" size="30" placeholder="Stock ETFs Founds" class="searchTit">
 										<input type="submit" value="go" class="goTit"></div>
 									</form>
 								<div class="portfolio"><a href="#">My Portfolio >></a></div>
 							</div>
-							<div class="imgRight right"><img src="http://placehold.it/140x100" alt="banner borsa"></div>
+							<div class="imgRight right"><img src="http://placehold.it/160x100" alt="banner borsa"></div>
 																						<div class="closeFloat"></div>
 						</div>
 					</div>
+				</li>
+				</ul>	
 				</div>
 			</div>
 		</div>
+
 		<div class="right"><a href="#"><img src="http://placehold.it/180x90" alt="banner"></a></div>
 				<div class="closeFloat"></div>
 	</div>
-	
+	</div>
 	<div id="nav">
 		<ul>
 			<li><a href="#">World</a></li>
@@ -459,7 +475,6 @@
 			<li><a href="#">Magazine</a></li>
 			<li><a href="#">Real Estate</a></li>
 			<li><a class="all" href="#">All</a></li>
-
 		</ul>
 	</div>
 	<div id="digital"></div>
@@ -468,40 +483,40 @@
 			<div class="articleColLeft left">
 				<!-- primo articolo -->
 				<div class="article">
-				<h2 class="firstArticle"><a href="#">Congressional Chairmen Near Deal on Pacific Trade Accord</a></h2>
-				<p class="author">By <span class="upper">Jonathan WEISMAN</span></p>
-				<p class="update">33 minutes ago</p>
+				<h3 class="firstArticle"><a href="#">Congressional Chairmen Near Deal on Pacific Trade Accord</a></h3>
+				<span class="author">By <span class="upper">Jonathan WEISMAN</span></span><br>
+				<span class="update">33 minutes ago</span>
 				<p class="contentArticle">Under the agreement, Congress would have the power to vote on the Trans-Pacific Partnership, an ambitious trade accord with 11 other nations, once it is completed, but lawmakers could not amend it.</p>
-				<p class="comment"><a href="#"><span>70 Comments</span></a></p>
+				<span class="comment"><a href="#"><span>70 Comments</span></a></span>
 				</div>
 				<!-- secondo articolo -->
 				<div class="article">
-				<h2 class="nextArticle"><a href="#">Al Qaeda Branch Seizes Airport and Oil Depot in Yemen</a></h2>
-				<p class="author">By <span class="upper">SAEED AL-BATATI</span> and <span class="upper">KAREEM FAHIM </span>
-				<span class="time">5:00 am et</span></p>
+				<h3 class="nextArticle"><a href="#">Al Qaeda Branch Seizes Airport and Oil Depot in Yemen</a></h3>
+				<span class="author">By <span class="upper">SAEED AL-BATATI</span> and <span class="upper">KAREEM FAHIM </span>
+				<span class="time">5:00 am et</span></span>
 				<p class="contentArticle"><a href="#"><img src="http://placehold.it/70x70" alt="image article"></a>Al Qaeda is capitalizing on the expanding multisided war in Yemen and the collapse of its government to carve out territory for itself. </p>
 				</div>
 				<!-- terzo articolo -->
 				<div class="article">
 					<h6>Common Sense</h6>
-					<h2 class="nextArticle"><a href="#">Attention Turns to New Hampshire, and Republican Hopefuls</a></h2>
-					<p class="author">By <span class="upper">JONATHAN MARTIN</span></p>
+					<h3 class="nextArticle"><a href="#">Attention Turns to New Hampshire, and Republican Hopefuls</a></h3>
+					<span class="author">By <span class="upper">JONATHAN MARTIN</span></span>
 					<p class="contentArticle"><a href="#"><img src="http://placehold.it/70x70" alt="image article"></a>A gathering this weekend at the state’s first candidate forum offers a chance for one of the 19 Republican presidential prospects to break ahead of the pack. </p>
-					<p class="comment"><a href="#"><span>70 Comments</span></a></p>
+					<span class="comment"><a href="#"><span>70 Comments</span></a></span>
 				</div>
 				<!-- quarto articolo -->
 				<div class="article ultimoArticle">
 					<h6>About new york</h6>
-					<h2 class="nextArticle"><a href="#">A Police Shot to a Boy’s Back, Echoing Since 1973 </a></h2>
-					<p class="author">By <span class="upper">JIM DWYER </span></p>
+					<h3 class="nextArticle"><a href="#">A Police Shot to a Boy’s Back, Echoing Since 1973 </a></h3>
+					<span class="author">By <span class="upper">JIM DWYER </span></span>
 					<p class="contentArticle">No one could pull out a cellphone to make a video of Clifford Glover, a black 10-year-old who was fatally shot by a white officer. </p>
 				</div>
 			</div>
 			<div class="articleColRight right">
 				<div class="articleCentre slideImg">
-					<p class="posImage"><a href="#"><img src="http://placehold.it/380x200" alt="image grande"></a></p>
+					<div class="posImage"><a href="#"><img src="http://placehold.it/380x200" alt="image grande"></a></div>
 					<p class="didascalia">Clockwise from top left: Joao Pedro Marnoto for The New York Times; Tom Jamieson for The New York Times; Gordon Welters for The New York Times; Jodi Hilton for The New York Times </p>
-					<h2 class="nextArticle centre"><a href="#">Favorite Streets in 12 European Cities </a></h2>
+					<h2 class="centre"><a href="#">Favorite Streets in 12 European Cities </a></h2>
 					<p class="contentArticle">Cobbled lanes, broad avenues, streets for gallery-hoppers, food-lovers, shoppers and flâneurs: Contributors in a dozen cities describe the byways (including one river) they love.</p>
 					<ul class="linkArticle">
 						<li><a href="#">36 Hours in Left Bank, Paris</a></li>
@@ -509,29 +524,29 @@
 					<p class="riga"></p>
 				</div>
 				<div class="articleCentre">
-					<h3 class="titleCentre"><a href="#">For Lucasfilm, the Way of Its Force Lies in Its Fans</a></h3>
-					<p class="author">By <span class="upper">BROOKS BARNES</span></p>
+					<h2 class="titleCentre"><a href="#">For Lucasfilm, the Way of Its Force Lies in Its Fans</a></h2>
+					<span class="author">By <span class="upper">BROOKS BARNES</span></span>
 					<p class="contentArticle imgCentre"><a href="#"><img src="http://placehold.it/170x130" alt="image article"></a>At a time when creating fan communities has become crucial to the success of movies, the “Star Wars” studio remains the most skilled at this art. </p>
 					<ul class="linkArticle">
 						<li><a href="#">‘Star Wars’ Trailer Is Unveiled</a></li>
 					</ul>
 				</div>
 				<div class="articleCentre">
-					<h3 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h3>
-					<p class="author">By <span class="upper">KATIE THOMAS</span></p>
+					<h2 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h2>
+					<span class="author">By <span class="upper">KATIE THOMAS</span></span>
 					<p class="contentArticle imgCentre">A study of a drug for patients with personality disorder exposes conflicts between academia and the pharmaceutical industry.</p>
-					<p class="comment"><a href="#"><span>6 Comments</span></a></p>
+					<span class="comment"><a href="#"><span>6 Comments</span></a></span>
 				</div>
 				<div class="articleCentre">
 					<h6>Retiring</h6>
-					<h3 class="titleCentre"><a href="#">More Older Adults Are Becoming Inventors</a></h3>
-					<p class="author">By <span class="upper">CONSTANCE GUSTKE</span></p>
+					<h2 class="titleCentre"><a href="#">More Older Adults Are Becoming Inventors</a></h2>
+					<span class="author">By <span class="upper">CONSTANCE GUSTKE</span></span>
 					<p class="contentArticle imgCentre"><a href="#"><img src="http://placehold.it/70x70" alt="image article"></a>Whether as volunteers or for profit, older adults are finding time to solve everyday problems.</p>
 					<p class="closeFloat"></p><!-- inserito perchè l'immagine va oltre il div, risolvere-->
 				</div>
 				<div class="articleCentre">
-					<h3 class="titleCentre"><a href="#">Why the Genius Founders Got Couples Therapy</a></h3>
-					<p class="author">By <span class="upper">LAURA M. HOLSON</span></p>
+					<h2 class="titleCentre"><a href="#">Why the Genius Founders Got Couples Therapy</a></h2>
+					<span class="author">By <span class="upper">LAURA M. HOLSON</span></span>
 					<p class="contentArticle imgCentre">Trying to keep their business partnership from imploding, Ilan Zechory and Tom Lehman decided to take up couples therapy. </p>
 				</div>
 				<div class="articleCentre">
@@ -557,17 +572,17 @@
 				<ul>
 					<li class="primiLi">
 					<img src="http://placehold.it/180x100" alt="image article">
-					<h3 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h3>
+					<h4 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h4>
 					<p class="elencoArticle">Cobbled lanes, broad avenues, streets for gallery-hoppers, food-lovers, shoppers and flâneurs: Contributors in 12 European cities describe the byways they love. </p>
 					</li>
 					<li class="primiLi">
 					<img src="http://placehold.it/180x100" alt="image article">
-					<h3 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h3>
+					<h4 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h4>
 					<p class="elencoArticle">Cobbled lanes, broad avenues, streets for gallery-hoppers, food-lovers, shoppers and flâneurs: Contributors in 12 European cities describe the byways they love. </p>
 					</li>
 					<li class="ultimoLi">
 					<img src="http://placehold.it/180x100" alt="image article">
-					<h3 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h3>
+					<h4 class="titleCentre"><a href="#">Promising Trial of Drug for Mental Illness Unravels</a></h4>
 					<p class="elencoArticle">Cobbled lanes, broad avenues, streets for gallery-hoppers, food-lovers, shoppers and flâneurs: Contributors in 12 European cities describe the byways they love. </p>
 					</li>
 				</ul>
@@ -578,7 +593,7 @@
 			<ul class="elencoRight">
 				<li class="primoLiElenco">
 					<h3 class="titleCentre"><a href="#">New York City’s Landmarks Law at 50 </a></h3>
-					<p class="author"><span class="upper">THE EDITORIAL BOARD</span></p>
+					<span class="author"><span class="upper">THE EDITORIAL BOARD</span></span>
 					<p class="contentArticle"><a href="#"><img src="http://placehold.it/50x50" alt="image article"></a>New construction is needed, but the best of the past must be preserved.</p>
 					<ul class="linkArticle">
 						<li><a href="#">ArtsBeat: Colbert and Lucas Talk ‘Star Wars’ and Other Topics</a></li>
@@ -590,7 +605,7 @@
 				<li>
 					<h6>Op-Ed Contributor</h6>
 					<h3 class="titleCentre"><a href="#">Reining in Soldiers of Fortune</a></h3>
-					<p class="author">By <span class="upper">LAURA M. HOLSON</span></p>
+					<span class="author">By <span class="upper">LAURA M. HOLSON</span></span>
 					<p class="contentArticle">Mercenaries are here to stay, and the best way to control them is through the marketplace.</p>
 					<ul class="linkArticle">
 						<li><a href="#">Nocera: Peering Through the Hazes</a></li>
@@ -601,45 +616,64 @@
 			<div class="banner">
 			<img src="http://placehold.it/300x250" alt="banner">
 			</div>
-			<h2 class="titleArticleRight">Weekend Reads</h2>
-			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#">Reclaiming the Age-Old Art of Getting Lost</a></h4>
+			<h3 class="titleArticleRight">Weekend Reads</h3>
+			<div class="articleRight paddFirstArticle">
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#">Reclaiming the Age-Old Art of Getting Lost</a></h3>
 				<p>Ditching modern-day navigation apps in favor of wandering and discovery.</p>
 			</div>
 			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#">Come for Coachella, but Party at #nochella</a></h4>
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#">Come for Coachella, but Party at #nochella</a></h3>
 				<p>With female artists more visible than ever, here are five who have put their stamp on the current gallery moment.</p>
 			</div>
 			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#">Distinct Prisms in an Ever-Shifting Kaleidoscope</a></h4>
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#">Distinct Prisms in an Ever-Shifting Kaleidoscope</a></h3>
 				<p>With female artists more visible than ever, here are five who have put their stamp on the current gallery moment.</p>
 			</div>
 			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#"> Sweet and Salty: Majorca’s Traditional Cuisine  </a></h4>
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#"> Sweet and Salty: Majorca’s Traditional Cuisine  </a></h3>
 				<p>The beauty of the island is matched only by the variety and abundance it produces, from oranges, to olives, to wine.</p>
 			</div>
 			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#"> Identity Theft Poses Extra Troubles for Children </a></h4>
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#"> Identity Theft Poses Extra Troubles for Children </a></h3>
 				<p>Children’s credit records are clean, and they don’t check their credit reports, two conditions data thieves take advantage of.</p>
 			</div>
 			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#"> Seller in Canceled Internment-Camp Auction Comes Forward </a></h4>
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#"> Seller in Canceled Internment-Camp Auction Comes Forward </a></h3>
 				<p>After an auction of artifacts from Japanese-American internment camps was called off, the seller stepped forward to explain his reasoning.</p>
 			</div>
 			<div class="articleRight">
-				<a href="#"><img src="http://placehold.it/120x90"></a>
-				<h4><a href="#"> 10 Galleries to Visit in SoHo and TriBeCa </a></h4>
+				<a href="#"><img src="http://placehold.it/120x90" alt="articolodestra"></a>
+				<h3><a href="#"> 10 Galleries to Visit in SoHo and TriBeCa </a></h3>
 				<p>Few things are as satisfying as braving the consumerist hordes and ducking into an art space that is hidden in plain sight.</p>
 			</div>
 			
 		</div>
 		<div class="closeFloat"></div>
+	</div>
+	<div id="contentVideo">
+		<div class="rowTitleVideo">
+			<h4 class="titleVideo"><a href="#">times<span class="changeColor">video</span></a></h4>
+			<h5 class="exploreVideo"><a href="#">explore all videos >></a></h5>
+			<div class="closeFloat"></div>
+		</div>
+		<div class="video">
+			<div class="windowVideo">
+				<object data="" type="video/mpeg"></object>
+				<div class="parVideo">
+					<a href="#">
+						<span class="titleSmall">U.S. & Politics <span> Retro Report</span> | 13:10</span>
+						<span class="titleBig">Anatomy of an Interrogation</span>
+					</a>
+				</div>
+			</div>
+			<div class="listVideo"></div>
+		</div>
 	</div>
 	
 </div>
@@ -661,6 +695,8 @@
 				</form>
 				<p class="sign">Don't have an account?<a href="#">Sign up</a></p>
 			</div>
-		</div>
+</div>
+<div id="overlay"></div>
+<div id="overlaySearch"></div>
 </body>
 </html>

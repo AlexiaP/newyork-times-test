@@ -1,10 +1,32 @@
+/*reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration:none;
+}
+
 html, body {
-margin:0;
 background-color:#fff;
 }
 
 #overlay{
-position:absolute;
+position:fixed;
 width:100%;
 height:100%;
 top:0;
@@ -36,8 +58,8 @@ width:960px;
 }
 
 #menu {
-border-bottom:1px solid #dedede;
-padding:15px 0;
+margin:20px 0;
+padding-bottom:30px;
 font: bold 10px georgia, arial, sans-serif;
 }
 
@@ -52,28 +74,26 @@ float:left;
 /*bottoni menu left */
 a.grey-button{
 color: #333;
-text-decoration:none;
 padding:7px;
 text-transform:uppercase;
 vertical-align:middle;
 }
 a.grey-button:hover{
-background:#efefef;
+background-color:#efefef;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
 }
 
 /*immagini menu left */
-.imgSections:before{
-content:url(../img/menu.png);
-padding:5px;
+.imgSections span{
+background:url(../img/menu.png) left center no-repeat;
+padding-left:20px;
 }
 
-.imgSearch:before{
-content:url(../img/search.png);
-padding:5px;
-vertical-align:top;
+.imgSearch span{
+background:url(../img/search.png) left center no-repeat;
+padding-left:20px;
 }
 
 /*bottoni menu right */
@@ -85,19 +105,17 @@ color:#fff;
 border-radius: 3px;
 text-transform:uppercase;
 padding:8px;
-text-decoration:none;
 vertical-align:middle;
 margin-right:7px;
-
 }
 a.blue-button:hover{
 background-color:#424282;
 }
 
 /*immagini menu right */
-.imgImpostazioni:before{
-content:url(../img/ingranaggio.png);
-vertical-align:top;
+.imgImpostazioni span{
+background:url(../img/ingranaggio.png) center no-repeat;
+padding:7px;
 }
 
 /* inizio css sottomenu */
@@ -116,7 +134,6 @@ font: bold 12px georgia,arial, sans-serif;
 }
 #subMenu ul{
 list-style-type:none;
-padding:0;
 margin:10px;
 border-bottom:1px solid #dedede;
 }
@@ -127,7 +144,6 @@ position:relative;
 
 #subMenu ul li a{
 color:black;
-text-decoration:none;
 display:block;
 padding:5px;
 }
@@ -178,12 +194,13 @@ z-index:10;
 content:none;
 }
 
-h5 {
+.subDiv h5 {
 padding:5px;
 margin:10px;
 color:#999;
 font-weight:normal;
 text-transform:uppercase;
+font-size:11px;
 }
 
 /* inizio css third sottomenu */
@@ -192,7 +209,7 @@ display:none;
 width:200px;
 position:absolute;
 left: 160px;
-top: -44px;
+top: -45px;
 }
 
 #subMenu > ul > li > .subDiv > ul > li:hover > .thirdSubMenu {
@@ -246,8 +263,8 @@ z-index:2;
 }
 
 #searchForm{
-padding:6px;
 text-align:center;
+padding-bottom:16px;
 }
 
 #searchForm .textsearch{
@@ -260,18 +277,16 @@ border-radius:3px;
 -webkit-border-radius:3px;
 background-color:#fff;
 padding:5px;
-font-size:16px;
+font-size:14px;
 vertical-align:middle;
 }
-/* se metto font-size si allarga la casella di ricerca, perchè */
-
 /* submit form ricerca*/
 #searchForm .go{
 background-color:#fff;
 border:1px solid #dedede;
 text-transform:uppercase;
 color:#999;
-padding:8px;
+padding:6px;
 margin:10px;
 border-radius:3px;
 -moz-border-radius:3px;
@@ -282,6 +297,7 @@ vertical-align:middle;
 }
 
 #search .closeSearch a{
+display:block;
 background-color: #dedede;
 color:#fff;
 height:20px;
@@ -290,11 +306,10 @@ border-radius:10px;
 -moz-border-radius:10px;
 -webkit-border-radius:10px;
 font: bold 18px georgia, arial, sans-serif;
-position:absolute;
-right:15px;
-top:10px;
+top:6px;
+left:98%;
 text-align:center;
-text-decoration:none;
+position:relative;
 }
 
 #search .closeSearch a:hover{
@@ -308,8 +323,8 @@ box-shadow:0 0 2px 1px #ccc;
 -moz-box-shadow:0 0 2px 1px #ccc;
 -webkit-box-shadow:0 0 2px 1px #ccc;
 position:absolute;
-top:37px;
-right:260px;
+top:42px;
+right:240px;
 width:210px;
 display:none;
 background:#fff url(../img/noImgSubscribe.png) center top no-repeat;
@@ -329,25 +344,21 @@ top:-13px;
 left:95px;
 }
 
-/* perchè se metto tag a non lo vede, e bisogna mettere un padding altro per non far andare la scritta sull'immagine*/
+/* perchè se metto tag a non lo vede*/
 .titleSubscribe{
 font: bold 14px georgia, arial, sans-serif;
 padding:110px 10px 10px 10px;
-margin:0;
 }
 .titleSubscribe a, .titleSubscribe a:visited{
-text-decoration:none;
 color:#000;
 }
 
 .textSubscribe {
 font: 12px georgia, arial, sans-serif;
 padding:10px 10px 30px 10px;
-margin:0;
 }
 
 .textSubscribe a, .textSubscribe a:visited{
-text-decoration:none;
 color:#000;
 }
 
@@ -358,7 +369,6 @@ margin:8px;
 
 .option a {
 font: 10px georgia, arial, sans-serif;
-text-decoration:none;
 border:1px solid #4682b4;
 color:#4682b4;
 padding:6px 50px;
@@ -384,7 +394,6 @@ left:95px
 #windowLogin{
 width:350px;
 height:550px;
-margin:0 auto;
 top:30px;
 border:1px solid #ccc;
 -webkit-border-radius: 3px;
@@ -401,7 +410,6 @@ left:37%;
 }
 
 .close a{
-text-decoration:none;
 position:absolute;
 right:-10px;
 top:-10px;
@@ -429,15 +437,14 @@ color:#fff;
 font:20px georgia, arial, sans-serif;
 color:#6D6968;
 text-align:center;
-padding:30px 0 0 0;
-margin:0px;
+padding-top:30px;
 }
 
 .descriptionLogin{
 font:13px georgia, arial, sans-serif;
 color:#999;
 text-align:center;
-margin:5px 60px;
+margin:5px 60px 20px 60px;
 }
 p.buttonFacebook{
 text-align:center;
@@ -456,8 +463,7 @@ color:#fff;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
-text-decoration:none;
-padding:10px 10px;
+padding:10px;
 }
 
 .buttonFacebook  a:hover{
@@ -465,14 +471,14 @@ background-color:#3866c7;
 }
 
 p.buttonGoogle{
-padding-bottom:20px;
+padding:10px 0 20px 0;
 text-align:center;
 }
 
 /* lettera g sul bottone*/
 .google{
 font:30px roboto, georgia, arial;
-padding-right:15px;
+padding-right:20px;
 vertical-align:center;
 }
 
@@ -482,9 +488,7 @@ color:#fff;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
-text-decoration:none;
 padding:10px 20px 10px 10px;
-
 }
 
 .buttonGoogle  a:hover{
@@ -494,14 +498,14 @@ background-color:#f26352;
 #formLog{
 border-top:1px solid #999;
 width:300px;
-margin:auto;
+margin: 15px auto;
 position:relative;
 }
 
 #formLog .or{
 text-transform:uppercase;
 position:absolute;
-top:-21px;
+top:-8px;
 left: 130px;
 background-color:#fff;
 padding:0 10px;
@@ -526,15 +530,14 @@ background-color:#fff;
 
 .check{
 color:#999;
-font:12px Georgia, arial, sans-serif;
+font:11px Georgia, arial, sans-serif;
 float:left;
 }
 .forgot a{
 color:#4682B4;
-font:12px Georgia, arial, sans-serif;
+font:11px Georgia, arial, sans-serif;
 float:right;
 padding:6px;
-text-decoration:none;
 }
 
 .forgot a:hover{
@@ -544,12 +547,11 @@ text-decoration:underline;
 /* terms service*/
 .privacy  {
 text-align:center;
-font:10px Georgia, arial, sans-serif;
+font:9px Georgia, arial, sans-serif;
 width:100%;
-padding-top:30px;
+padding:50px 0 10px 0;
 }
 .privacy a{
-text-decoration:none;
 padding:10px;
 color:#999;
 }
@@ -579,7 +581,6 @@ margin-top:30px;
 
 .sign a{
 color:#4682B4;
-text-decoration:none;
 margin-left:5px;
 }
 
@@ -592,22 +593,19 @@ clear:both;
 }
 
 #language{
-position:absolute;
 border-left:1px solid #dedede;
 border-top:1px solid #dedede;
 border-right:1px solid #dedede;
+border-bottom:px solid #fff;
 border-top-left-radius:6px;
 border-top-right-radius:6px;
-top:32px;
-left:43%;
 background-color:#fff;
 text-transform:uppercase;
-padding-top:4px;
-
+text-align:center;
+margin:-40px 380px 0 380px;
 }
 
 #language a{
-text-decoration:none;
 font:10px georgia,arial,sans-serif;
 padding:8px;
 color:#999;
@@ -624,15 +622,24 @@ color:#000;
 
 #header{
 border-bottom:2px solid #000;
-margin:0;
-padding:8px 0 3px 0;
 }
 
 /* alternativa posizionare i div image in absolute*/
 
+#titleNY{
+border-top:1px solid #dedede;
+padding-top:10px;
+}
 
-.titleHeader{
-margin-left:65px;
+#logo{
+background:url(../img/titleHeader.png) top center no-repeat;
+height:70px;
+margin-left:50px;
+}
+
+h1{
+text-indent:-9999px;
+font-size:45px;
 }
 
 /* inizio piccolo menu sotto titolo header*/
@@ -642,16 +649,22 @@ position:relative;
 left:40px;
 }
 
-.date{
-padding-right:8px;
-text-align:center;
+.subList > ul  > li.date{
+border:none;
 }
 
-.subList > a{
-color:#000;
-text-decoration:none;
+.subList > ul{
+list-style-type:none;
+padding-bottom:10px; /* verificare se serve padding */
+}
+.subList > ul > li{
+display:inline;
 border-left:1px solid #dedede;
-padding:0 8px;
+padding:0 6px;
+}
+
+.subList > ul >li > a{
+color:#000;
 text-align:center;
 }
 
@@ -659,49 +672,44 @@ a.linkNew:hover, a.linkVideo:hover{
 text-decoration:underline;
 }
 
-a.linkNew:before{
-content:url(../img/new.png);
-vertical-align:top;
-padding-right:3px;
+a.linkNew{
+background: url(../img/new.png) left center no-repeat;
+padding-left:22px;
 }
 
-a.linkVideo:before{
-content:url(../img/video.png);
-vertical-align:middle;
-padding-right:3px;
+a.linkVideo{
+background:url(../img/video.png) left center no-repeat;
+padding-left:22px;
 }
 
-a.linkTemp:before{
-content:url(../img/soleP.png);
-vertical-align:top;
-padding-right:3px;
-}
-
-a.linkBorsa:after{
-content:url(../img/frecciaBorsa.png);
-vertical-align:top;
-padding-left:3px;
-}
-
-a.linkTemp, a.linkBorsa{
+.linkTemp > a{
+background:url(../img/soleP.png) left center no-repeat;
+padding-left: 22px;
 text-transform:uppercase;
 z-index:1;
 }
 
-a.linkTemp:hover + div.temp{
+.linkBorsa > a{
+background:url(../img/frecciaBorsa.png) right center no-repeat;
+text-transform:uppercase;
+z-index:1;
+}
+
+.linkTemp:hover .temp{
 display:block;
 }
 
 .var{
 color:#008000;
+margin-right:10px;
 }
 
-a.linkTemp:hover, a.linkBorsa:hover{
+.linkTemp:hover, .linkBorsa:hover{
 background-color:#dedede;
 border-radius:3px;
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
-padding:8px;
+padding:6px;
 }
  
  /* inizio div attivato con hover meteo*/
@@ -729,15 +737,14 @@ left:47%;
 padding:14px 14px 0 14px;
 }
 
-.temp h3{
+.temp h5{
 text-transform:uppercase;
-margin:0;
+font-weight:bold;
 }
 
 .temp a{
 color:#326891;
 font:10px georgia,arial, sans-serif;
-text-decoration:none;
 padding-top:3px;
 }
 
@@ -755,7 +762,7 @@ margin:15px 0;
 color:#999;
 text-transform:uppercase;
 font-size:11px;
-margin:4px 0;
+margin:4px 0 10px 0;
 }
 
 .meteo ul{
@@ -763,33 +770,27 @@ background-image:url(../img/soleG.png);
 background-repeat:no-repeat;
 background-position:left 10px;
 border-right:1px solid #dedede;
-padding-right:10px;
-padding-bottom:20px;
+padding-right:40px;
+padding-bottom:6px;
 list-style-type:none;
 }
 
 .meteo > ul > li{
-padding:6px;
+padding:0 0 10px 50px;
 font-size:11px
 }
 
 .meteo > ul > li.title{
 font-weight:bold;
-font-size:16px;
-}
-
-.meteo > ul > li > span, .elencoMeteo > ul > li > p> span{
-color:#999;
+font-size:14px;
 }
 
 .imgBunner{
-padding:30px 10px 0 0;
+padding:26px 10px 10px 0;
 }
 
 .elencoMeteo ul{
 list-style-type:none;
-margin:0;
-padding:0;
 }
 
 .elencoMeteo > ul > li.primoGiorno{
@@ -802,9 +803,19 @@ display:inline;
 margin-left:22px;
 text-align:center;
 }
+
+.elencoMeteo > ul > li > ul> li >img{
+padding-bottom:10px;
+}
+
 .giorni{
 text-transform:uppercase;
-font-size:8px;
+font-size:10px;
+padding:4px;
+}
+
+.tempMin{
+color:#999;
 }
 
 .more{
@@ -812,7 +823,7 @@ text-transform:uppercase;
 text-align:right;
 font-size:10px;
 color:#326891;
-margin-bottom:14px;
+margin:14px 0;
 }
 
  /* inizio div attivato con hover titoli borsa*/
@@ -830,7 +841,7 @@ border-radius:3px;
 -webkit-border-radius:3px;
 }
 
-a.linkBorsa:hover + div.borsa{
+.linkBorsa:hover  .borsa{
 display:block;
 }
 
@@ -843,6 +854,7 @@ left:47%;
 
 .titleBorsa{
 color:#000;
+font-weight:bold;
 }
 
 .titleBorsa span{
@@ -858,7 +870,7 @@ color:#999;
 .titoliBorsa{
 border-top:1px solid #dedede;
 border-bottom:1px solid #dedede;
-margin:8px 0;
+margin-bottom:6px;
 }
 
 .tabellaBorsa{
@@ -882,11 +894,9 @@ background-color:#dedede;
 cursor:context-menu;
 }
 
-
 .titoli{
 color:#111;
 text-align:left;
-
 }
 
 .azioni{
@@ -901,7 +911,7 @@ text-align:right;
 
 .grafico{
 list-style-type:none;
-padding:0 0 0 30px;
+padding-left:30px;
 margin:6px;
 }
 
@@ -912,7 +922,6 @@ padding-bottom:20px;
 
 li.imgGrafico {
 padding-bottom:0;
-
 }
 
 .giornoGrafico{
@@ -922,12 +931,13 @@ margin-top:-3px;
 }
 
 .imgRight{
-padding:10px 0;
+padding:20px 0;
 }
 
 .bottomLeft{
 border-right:1px solid #dedede;
 padding-right:12px;
+margin:15px 0;
 }
 
 .formTitoli{
@@ -955,18 +965,21 @@ text-transform:uppercase;
 padding:4px;
 font-size:12px;
 color:#333;
+background-color:#fff;
 margin-left:4px;
 cursor:pointer;
 }
 
-.portfolio{
-padding:16px 0 0 0;
+.goTit:hover{
+background-color:#dedede;
+}
 
+.portfolio{
+padding-top:16px;
 }
 
 .portfolio a{
 color:#326891;
-text-decoration:none;
 }
 
 .portfolio a:hover{
@@ -981,8 +994,6 @@ padding:5px 0;
 
 #nav ul{
 list-style-type:none;
-margin:0;
-padding:0;
 }
 
 #nav ul li{
@@ -991,7 +1002,6 @@ padding:4px;
 }
 
 #nav > ul > li > a {
-text-decoration:none;
 font-size:12px;
 color:#000;
 padding:2px;
@@ -1044,23 +1054,18 @@ margin-right:10px;
 padding-bottom:10px;
 }
 
-.article p, .article h2{
-padding:0;
-margin:0;
-}
 
-h2.firstArticle a{
+h3.firstArticle a{
 font:italic bold 20px georgia,arial,sans-serif;
 margin-bottom:4px;
 color:#000;
-text-decoration:none;
 }
 
-h2.firstArticle a:hover{
+h3.firstArticle a:hover{
 text-decoration:underline;
 }
 
-p.author{
+.author{
 font-size:10px;
 color:#999;
 }
@@ -1076,7 +1081,7 @@ font-size:10px;
 font-weight:normal;
 }
 
-p.update{
+.update{
 font-size:10px;
 color:#a81817;
 }
@@ -1090,16 +1095,15 @@ float:right;
 margin:4px 0 4px 4px;
 }
 
-p.comment a{
+.comment a{
 color:#326891;
 font-size:12px;
 background-image:url(../img/commenti.png);
 background-repeat:no-repeat;
 background-position:left center;
-text-decoration:none;
 }
 
-p.comment a:hover{
+.comment a:hover{
 text-decoration:underline;
 }
 
@@ -1116,21 +1120,19 @@ padding-right:5px;
 width:350px;
 }
 
-h2.nextArticle a{
+h3.nextArticle a{
 margin:10px 0 4px 0;
 font:italic bold 17px georgia,arial,sans-serif;
 color:#000;
-text-decoration:none;
 }
 
-h2.nextArticle a:hover{
+h3.nextArticle a:hover{
 text-decoration:underline;
 }
 
 .article h6, .articleCentre h6, .elencoRight h6{
 text-transform:uppercase;
 margin:15px 0 0 0;
-padding:0;
 color:#666;
 font-size:9px;
 font-weight:normal;
@@ -1142,41 +1144,37 @@ border-bottom:1px solid #dedede;
 padding-bottom:12px;
 }
 
-.articleCentre p, .articleCentre h2 {
-margin:0;
-padding:0;
-}
-
 .slideImg{
 border:none;
-padding:0;
 }
 
-p.posImage{
+.posImage{
 text-align:center;
-margin:0;
 }
 
-p.posImage img{
+.posImage img{
 width:100%;
 }
 
 p.didascalia{
 color:#999;
 font-size:10px;
-margin-top:0;
 padding-bottom:10px;
 }
 
 h2.centre a{
-font-style:normal;
-font-weight:600;
+margin:10px 0 4px 0;
+font:normal 600 17px georgia,arial,sans-serif;
+color:#000;
+}
+
+h2.centre a:hover{
+text-decoration:underline;
 }
 
 ul.linkArticle{
 font:bold 6px georgia, arial, sans-serif;
 margin:4px 0 0 6px;
-padding:0;
 list-style-position:outside;
 list-style-type:disc;
 }
@@ -1188,7 +1186,6 @@ margin-bottom:3px;
 ul.linkArticle > li > a{
 font:bold 11px georgia, arial, sans-serif;
 color:#000;
-text-decoration:none;
 vertical-align:-10%;
 }
 
@@ -1210,15 +1207,14 @@ margin:-10px 0 4px 4px;
 }
 
 
-h3.titleCentre a, h3.titleCentre{
+h2.titleCentre a, h2.titleCentre, h4.titleCentre a, h4.titleCentre, h3.titleCentre a, h3.titleCentre  {
 margin:10px 0 2px 0;
 font:13px georgia,arial,sans-serif;
 color:#000;
 font-weight:600;
-text-decoration:none;
 }
 
-h3.titleCentre a:hover{
+h2.titleCentre a:hover, h4.titleCentre a:hover, h3.titleCentre a:hover{
 text-decoration:underline;
 }
 
@@ -1237,11 +1233,9 @@ font-weight:normal;
  color:#555;
  }
  
-
  .ultimiArticleLeft ul{
  list-style-type:none;
- margin:0 auto;
- padding:0;
+ margin-top:20px;
  }
  
  .ultimiArticleLeft  ul  li{
@@ -1250,10 +1244,6 @@ font-weight:normal;
  padding-right:10px;
  }
  
- .ultimiArticleLeft ul li p{
- margin:0;
- }
-
 .primiLi{
 border-right:1px solid #dedede;
 margin-right:10px;
@@ -1264,12 +1254,9 @@ margin-right:10px;
  }
  
  h3.titleRight a, h3.titleRight{
-margin:0;
-padding:0;
 font:13px georgia,arial,sans-serif;
 color:#000;
 font-weight:600;
-text-decoration:none;
 text-align:center;
 }
 
@@ -1279,8 +1266,7 @@ text-decoration:underline;
 
 .elencoRight{
 list-style-type:none;
-margin:0;
-padding:5px 0 0 0;
+padding-top:5px;
 }
  
 .elencoRight li{
@@ -1296,11 +1282,6 @@ margin-right:10px;
 margin-bottom:23px;
  }
   
-.elencoRight p, .elencoRight h2 {
-margin:0;
-padding:0;
-}
-
 .banner{
 border-top:1px solid #dedede;
 border-bottom:4px solid #dedede;
@@ -1308,7 +1289,7 @@ text-align:center;
 padding: 10px 0;
 }
 
-.titleArticleRight{
+h3.titleArticleRight{
 font-size:18px;
 font-weight:bold;
 color:#222;
@@ -1317,26 +1298,121 @@ margin:4px 0;
 
 .articleRight{
 border-top:1px solid #dedede;
-padding:20px 0;
+padding:4px 0;
+margin-top:20px;
 }
 
-.articleRight h4{
-margin:0;
-}
-
-.articleRight h4 a{
+.articleRight h3 a{
 font-weight:normal;
 color:#222;
 font-size:18px;
-text-decoration:none;
 }
 
 .articleRight img{
 float:right;
-padding-left:10px;
+padding:4px 0 0 10px;
 }
 
 .articleRight p{
 font-size:13px;
 color:#555;
+}
+
+.articleRight:hover{
+background-color:#f8f8f8;
+}
+
+.paddFirstArticle{
+padding-top:20px;
+margin-top:0;
+}
+
+#contentVideo{
+border-top:2px solid #000;
+}
+
+.rowTitleVideo{
+border-bottom:1px solid #dedede;
+padding:10px 0;
+}
+
+
+.titleVideo a{
+text-transform:uppercase;
+color:#000;
+font-size:12px;
+font-weight:bold;
+float:left;
+}
+
+.changeColor{
+color:#555;
+}
+
+h5.exploreVideo{
+vertical-align:middle;
+}
+
+.exploreVideo a{
+color:#555;
+font-size:10px;
+text-transform:uppercase;
+float:right;
+}
+
+.exploreVideo a:hover{
+text-decoration:underline;
+}
+
+.video{
+height:100px;
+padding-top:15px;
+}
+
+.windowVideo{
+float:left;
+width:70%;
+position:relative;
+}
+
+.windowVideo object{
+width:700px;
+height:400px;
+position:relative;
+}
+
+.parVideo a{
+background-image: url(http://placehold.it/80x80);
+background-repeat:no-repeat;
+background-position:left top;
+padding:10px 30px;
+position:absolute;
+top:300px;
+left:50px;
+}
+
+.titleBig, .titleSmall{
+color:#fff;
+padding-left:100px;
+font-weight:normal;
+vertical-align:top;
+}
+
+.titleBig{
+font-size:36px;
+}
+
+.titleSmall{
+text-transform:uppercase;
+font-size: 16px;
+}
+
+.titleSmall span{
+font-weight:bold;
+font-size: 14px;
+padding-left:10px;
+}
+
+.listVideo{
+float:right;
 }
